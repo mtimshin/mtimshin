@@ -560,7 +560,7 @@ a:hover {
 
 .h1-mob {
     position: absolute;
-    bottom: 40%;
+    bottom: 42%;
     width: 100vw;
 }
 
@@ -823,6 +823,28 @@ a:hover {
 .btns .btn {
     margin-top: 12.2vh;
 }
+
+@media (max-width: 980px) {
+    .btns .btn {
+        width: 50%;
+        height: 5vh;
+    }
+}
+
+/* .popup_menu__body_btn {
+    display: flex;
+    position: absolute;
+    bottom: 2.4%;
+    width: 100%;
+    padding: 0 4.4% 0 4.4%;
+    box-sizing: border-box;
+} */
+
+/* .popup_menu__body_btn .btn:first-child {
+    background-color: white;
+    color: black;
+    margin-top: 5.2vh;
+} */
 
 
 
