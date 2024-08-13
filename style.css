@@ -567,7 +567,7 @@ a:hover {
 .arrow-mob {
     width: 9vw;
     position: absolute;
-    bottom: 3%;
+    bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 1.5s infinite;
