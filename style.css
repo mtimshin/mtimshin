@@ -820,6 +820,12 @@ a:hover {
     padding-bottom: 7vh;
 }
 
+@media (max-width: 980px) {
+    .btns {
+        height: 37vh;
+    }
+}
+
 .btns .btn {
     margin-top: 12.2vh;
 }
@@ -829,6 +835,12 @@ a:hover {
     .btns .btn2 {
         width: 50%;
         height: 5vh;
+    }
+}
+
+@media (max-width: 980px) {
+    .btns .btn {
+        margin-top: 10.2vh;
     }
 }
 
