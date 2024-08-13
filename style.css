@@ -754,6 +754,7 @@ a:hover {
 
 .services_list p {
     width: 20vw;
+    padding-top: 3vh;
 }
 
 @media (max-width: 980px) {
