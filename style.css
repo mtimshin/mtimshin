@@ -294,7 +294,7 @@ html {
     position: relative;
     padding: 0 1.4%;
     box-sizing: border-box;
-    overflow: hidden;
+
 }
 
 @media (max-width: 980px) {
@@ -704,6 +704,7 @@ a:hover {
 .services {
     position: relative;
     padding: 12% 0 0 0;
+    overflow: hidden;
 }
 
 @media (max-width: 980px) {
