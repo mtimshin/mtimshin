@@ -245,10 +245,6 @@ input:-ms-input-placeholder {
 
 /* SCROLL */
 
-html {
-    overflow-x: hidden;
-}
-
 /* Стилизация всего скроллбара */
 ::-webkit-scrollbar {
     width: 12px; /* Ширина вертикального скроллбара */
@@ -278,11 +274,12 @@ html {
 }
 
 html {
-    background-color: #101010;
+    background-color: #0A0A0A;
     font-family: "Manrope", Helvetica, sans-serif;
     color: white;
     text-decoration: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .stripe {
