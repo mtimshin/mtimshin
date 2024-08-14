@@ -701,6 +701,7 @@ a:hover {
 /* SERVICES */
 
 .services {
+    position: relative;
     padding: 12% 0 0 0;
 }
 
@@ -708,6 +709,12 @@ a:hover {
     .services {
         padding: 26% 0 0 0;
     }
+}
+
+.services_puzyr1 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
 }
 
 .services_heading {
