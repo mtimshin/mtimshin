@@ -463,6 +463,7 @@ a:hover {
     background-position: top;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 
 }
 
@@ -722,7 +723,7 @@ a:hover {
     left: 50%;
     top: 30%;
     width: 200%;
-    opacity: 0.6;
+    opacity: 0.47;
     z-index: 1;
 }
 
@@ -863,21 +864,6 @@ a:hover {
         margin-top: 10.2vh;
     }
 }
-
-/* .popup_menu__body_btn {
-    display: flex;
-    position: absolute;
-    bottom: 2.4%;
-    width: 100%;
-    padding: 0 4.4% 0 4.4%;
-    box-sizing: border-box;
-} */
-
-/* .popup_menu__body_btn .btn:first-child {
-    background-color: white;
-    color: black;
-    margin-top: 5.2vh;
-} */
 
 
 
