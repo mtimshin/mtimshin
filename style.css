@@ -786,6 +786,12 @@ a:hover {
     width: 21vw;
 }
 
+@media (min-width: 2330px) {
+    .services_list li:nth-child(5) p  {
+        width: 23vw;
+    }
+}
+
 @media (max-width: 1030px) {
     .services_list li:nth-child(1) p {
         width: 46vw;
