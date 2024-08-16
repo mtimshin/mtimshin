@@ -286,8 +286,8 @@ html {
 }
 
 body {
-    background-image: url("img/puzyr1.svg");
-    background-repeat: no-repeat;
+    /* background-image: url("img/puzyr1.svg");
+    background-repeat: no-repeat; */
 }
 
 @media (max-width: 1030px) {
