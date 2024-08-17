@@ -79,3 +79,33 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+// Slider
+
+// const reviewsSlider = new Swiper('.reviews_slider', {
+//     effect: 'fade',
+//     fadeEffect: {
+//         crossFade: true
+//     },
+//     navigation: {
+//         nextEl: '.reviews_slider_next',
+//         prevEl: '.reviews_slider_prev'
+//     },
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: false,
+//     },
+//     breakpoints: {
+//         4069: {
+//           slidesPerView: 2,
+//         //   slidesPerGroup: 1,
+//         },
+//     },
+//     loop: true,
+//     spaceBetween: 0,
+// });
+
+
+
+
