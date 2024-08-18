@@ -572,6 +572,19 @@ a:hover {
     padding-right: 5vw;
 }
 
+.header_menu li:nth-child(5) .link {
+    padding-right: 1.1vw;
+}
+
+.header_menu li:nth-child(5) .link:hover {
+    background: url('img/target.svg') no-repeat right -0.06vw top;
+    background-size: 0.7vw;
+}
+
+.header_menu li:nth-child(5) .link.active::after {
+    border: none;
+}
+
 .h1 {
     position: absolute;
     bottom: 0;
@@ -1342,7 +1355,8 @@ a:hover {
 }
 
 .reviews_slider_slide_text h3 {
-    margin-bottom: 1.2vh;
+    margin-bottom: 1.94vh;
+    margin-left: -0.7px;
 }
 
 .reviews_slider_slide_text p {
