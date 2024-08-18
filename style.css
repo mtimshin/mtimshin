@@ -572,18 +572,47 @@ a:hover {
     padding-right: 5vw;
 }
 
-.header_menu li:nth-child(5) .link {
+/* .header_menu li:nth-child(5) .link {
     padding-right: 0.9vw;
 }
 
 .header_menu li:nth-child(5) .link:hover {
     background: url('img/target.svg') no-repeat right -0.06vw top;
     background-size: 0.7vw;
+    transform: scale(0.5);
+    transition: transform 0.3s ease-in-out;
 }
 
-.header_menu li:nth-child(5) .link.active::after {
-    border: none;
+.header_menu li:nth-child(5) .link:hover .link {
+    transform: scale(0.5);
+} */
+
+.header_menu li:nth-child(5) .link {
+    padding-right: 0.9vw;
+    position: relative; /* Добавим относительное позиционирование */
 }
+
+.header_menu li:nth-child(5) .link:before {
+    content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    top: 30%; 
+    right: -4%;
+    transform: translateY(-50%);
+    width: 0.64vw; 
+    height: 0.64vw;
+    background: url('img/target.svg') no-repeat center; 
+    background-size: cover;
+    opacity: 0; /* Скрываем пиктограмму по умолчанию */
+    transition: opacity 0.3s ease-in-out; /* Анимация прозрачности */
+}
+
+.header_menu li:nth-child(5) .link:hover:before {
+    opacity: 1; /* Делаем пиктограмму видимой при наведении */
+}
+
+
+
+
 
 .h1 {
     position: absolute;
@@ -665,7 +694,6 @@ a:hover {
 }
 
 @keyframes bounce {
-
     0%,
     100% {
         transform: translate(-50%, 0);
