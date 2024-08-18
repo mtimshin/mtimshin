@@ -1,31 +1,3 @@
-let isScrolling = false;
-
-window.addEventListener('wheel', function(event) {
-    // Проверяем, находимся ли мы на первом экране
-    if (window.scrollY === 0) {
-        event.preventDefault(); // Отключаем стандартное поведение прокрутки
-
-        if (!isScrolling) {
-            isScrolling = true;
-
-            // Определяем направление прокрутки
-            const delta = event.deltaY > 0 ? 1 : -1;
-            const nextSection = window.scrollY + (delta * window.innerHeight);
-
-            // Прокручиваем к следующему экрану
-            window.scrollTo({
-                top: nextSection,
-                behavior: 'smooth'
-            });
-
-            // Ждем завершения прокрутки
-            setTimeout(() => {
-                isScrolling = false;
-            }, 800); // Время должно соответствовать времени анимации прокрутки
-        }
-    }
-});
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const items = document.querySelectorAll('.services_list__item');
@@ -79,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
 
 
 

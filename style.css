@@ -243,9 +243,12 @@ input:-ms-input-placeholder {
 
 #cases,
 #reviews,
-#stages,
-#contacts {
+#stages {
     scroll-margin-top: 16vh;
+}
+
+#contacts {
+    scroll-margin-top: 12vh;
 }
 
 
@@ -253,7 +256,7 @@ input:-ms-input-placeholder {
 
 /* Стилизация всего скроллбара */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 6px;
     /* Ширина вертикального скроллбара */
     height: 12px;
     /* Высота горизонтального скроллбара */
@@ -265,26 +268,28 @@ input:-ms-input-placeholder {
     /* Цвет ползунка */
     border-radius: 6px;
     /* Закругленные углы */
+    transition-duration: 0.4s;
 }
 
 /* Стилизация "ползунка" при наведении */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
     /* Цвет ползунка при наведении */
+    cursor: pointer;
 }
 
 /* Стилизация "дорожки" (track) */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #1f1f1f;
     /* Цвет дорожки */
     border-radius: 6px;
     /* Закругленные углы */
+    transition-duration: 0.4s;
 }
 
 /* Стилизация "дорожки" при наведении */
 ::-webkit-scrollbar-track:hover {
-    background: #e1e1e1;
     /* Цвет дорожки при наведении */
+    cursor: pointer;
 }
 
 html {
@@ -877,7 +882,6 @@ a:hover {
     }
 }
 
-
 .services_list__item_block {
     width: 50%;
 }
@@ -957,7 +961,6 @@ a:hover {
 }
 
 @media (max-width: 1030px) {
-
     .btns .btn,
     .btns .btn2 {
         width: 50%;
@@ -1011,7 +1014,7 @@ a:hover {
 
 .cases_list__item_img1 img {
     object-fit: cover;
-    transition: transform 0.7s ease, opacity 0.7s ease;
+    transition: transform 1s ease, opacity 1s ease;
 }
 
 .cases_list__item_block1 {
