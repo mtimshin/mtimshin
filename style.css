@@ -432,12 +432,14 @@ h2 {
     font-weight: 200;
     letter-spacing: -0.036em;
     margin-left: -4px;
+    margin-top: -0.4%;
 }
 
 @media (max-width: 1030px) {
     h2 {
         font-size: 15.2vw;
         letter-spacing: -0.04em;
+        margin-left: -2.5px;
     }
 }
 
@@ -857,13 +859,13 @@ a:hover {
 
 .services_list {
     position: relative;
-    margin-top: 8vh;
+    margin-top: 11vh;
     z-index: 2;
 }
 
 @media (max-width: 1030px) {
     .services_list {
-        margin-top: 6.8vh;
+        margin-top: 7.4vh;
     }
 }
 
@@ -900,12 +902,12 @@ a:hover {
 }
 
 .services_list__item {
-    margin-top: 0.78%;
+    margin-top: 0.3%;
 }
 
 @media (max-width: 1030px) {
     .services_list__item {
-        margin-top: 2.6%;
+        margin-top: 0.8%;
     }
 }
 
@@ -949,12 +951,12 @@ a:hover {
 
 @media (max-width: 1030px) {
     .services_list__item_cont {
-        height: 19vh;
+        height: 20vh;
     }
 }
 
 .services_list__item_stripe:first-child {
-    margin-bottom: 0.78%;
+    margin-bottom: 0.2%;
 }
 
 .services_list__item_stripe::before {
@@ -983,7 +985,7 @@ a:hover {
 
 @media (max-width: 1030px) {
     .services_list__item_stripe:first-child {
-        margin-bottom: 2.6%;
+        margin-bottom: 0.8%;
     }
 }
 
@@ -1028,9 +1030,9 @@ a:hover {
 
 /* CASES */
 
-.cases {
+/* .cases {
     padding-top: 0.6%;
-}
+} */
 
 
 .cases_list {
