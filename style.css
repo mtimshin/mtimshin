@@ -247,6 +247,14 @@ input:-ms-input-placeholder {
     scroll-margin-top: 16vh;
 }
 
+@media (max-width: 1030px) {
+    #cases,
+    #reviews,
+    #stages {
+        scroll-margin-top: 12vh;
+    }
+}
+
 #contacts {
     scroll-margin-top: 12vh;
 }
@@ -961,6 +969,7 @@ a:hover {
 }
 
 @media (max-width: 1030px) {
+
     .btns .btn,
     .btns .btn2 {
         width: 50%;
@@ -1242,11 +1251,13 @@ a:hover {
     align-items: center;
     /* overflow: hidden; */
     margin: 14vh 0 28vh 0;
+    box-sizing: border-box;
 }
 
 @media (max-width: 1030px) {
     .reviews_slider {
         margin: 10vh 0 10vh 0;
+        overflow: hidden;
     }
 }
 
@@ -1397,7 +1408,7 @@ a:hover {
 .reviews_slider_next:hover,
 .reviews_slider_prev:hover {
     opacity: 0.5;
-} 
+}
 
 .reviews_slider_slide:nth-child(odd) {
     margin-top: 12vh;
@@ -1603,8 +1614,10 @@ a:hover {
     position: relative;
     transition-property: transform;
     display: flex;
-    opacity: 0; /* Исходная прозрачность */
-    transition: opacity 0.5s ease; /* Плавный переход для прозрачности */
+    opacity: 0;
+    /* Исходная прозрачность */
+    transition: opacity 0.5s ease;
+    /* Плавный переход для прозрачности */
 }
 
 @media (max-width: 1070px) {
@@ -2181,8 +2194,10 @@ button.swiper-pagination-bullet {
 .swiper-fade .swiper-slide-active,
 .swiper-fade .swiper-slide-active .swiper-slide-active {
     pointer-events: auto;
-    opacity: 1; /* Полная видимость для активного слайда */
-    transition: opacity 0.5s ease; /* Плавный эффект */
+    opacity: 1;
+    /* Полная видимость для активного слайда */
+    transition: opacity 0.5s ease;
+    /* Плавный эффект */
 }
 
 .swiper-cube {
