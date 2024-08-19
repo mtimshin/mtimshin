@@ -771,17 +771,16 @@ a:hover {
     flex-direction: column;
     position: absolute;
     transform: translateX(-50%);
-    top: 26%;
+    top: 32%;
     left: 50%;
 }
 
 :is(.popup_menu__body_links) a {
-    font-size: 14vw;
+    font-size: 12.4vw;
     font-weight: 200;
     letter-spacing: -0.04em;
     border-bottom: 1px white solid;
     /* padding-bottom: 0.2vh; */
-    padding-top: 0.9vh;
 }
 
 .popup_menu__body_links_1,
@@ -793,6 +792,7 @@ a:hover {
 .popup_menu__body_links_2 {
     align-items: flex-end;
     margin-right: 50%;
+    margin-top: -1vh;
 }
 
 .popup_menu__body_links_1 {
@@ -1513,7 +1513,7 @@ div.reviews_slider_swiper {
 }
 
 .contacts .popup_menu__body_links_2 {
-    margin-top: -2vh;
+    margin-top: -1.2vh;
 }
 
 @media (max-width: 1030px) {
