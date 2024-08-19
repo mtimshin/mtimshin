@@ -595,14 +595,14 @@ a:hover {
 }
 
 .header_menu li:nth-child(5) .link:before {
-    content: ''; 
+    content: '';
     position: absolute; /* Абсолютное позиционирование */
-    top: 30%; 
+    top: 30%;
     right: -4%;
     transform: translateY(-50%);
-    width: 0.64vw; 
+    width: 0.64vw;
     height: 0.64vw;
-    background: url('img/target.svg') no-repeat center; 
+    background: url('img/target.svg') no-repeat center;
     background-size: cover;
     opacity: 0; /* Скрываем пиктограмму по умолчанию */
     transition: opacity 0.3s ease-in-out; /* Анимация прозрачности */
@@ -1293,7 +1293,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     /* overflow: hidden; */
-    margin: 14vh 0 28vh 0;
+    margin: 2vh 0 28vh 0;
     box-sizing: border-box;
 }
 
@@ -1304,28 +1304,40 @@ a:hover {
     }
 }
 
-.reviews_slider_list {
+div.reviews_slider_swiper {
     display: flex;
     width: 40vw;
-    height: 80vh;
-    /* overflow: hidden; */
+    overflow: hidden;
+    padding-bottom: 12vh;
 }
 
 @media (max-width: 1030px) {
-    .reviews_slider_list {
+    div.reviews_slider_swiper {
+        padding-bottom: 0;
         width: 70vw;
-        height: 66vh;
     }
 }
 
 .reviews_slider_slide {
     position: relative;
     display: block;
+    opacity: 0;
+    transition: opacity 5s;
     width: 20vw;
     height: 76vh;
 }
+.reviews_slider_slide.swiper-slide-active {
+    opacity: 1;
 
+}
+@media (min-width: 1031px) {
+    .reviews_slider_slide.swiper-slide-next {
+        opacity: 1;
+
+    }
+}
 @media (max-width: 1030px) {
+
     .reviews_slider_slide {
         width: 70vw;
         height: 66vh;
@@ -1454,13 +1466,18 @@ a:hover {
     opacity: 0.5;
 }
 
-.reviews_slider_slide:nth-child(odd) {
+.reviews_slider_slide a {
+    position: relative;
+}
+.reviews_slider_slide:nth-child(odd) a {
     margin-top: 12vh;
+    margin-bottom: -12vh;
 }
 
 @media (max-width: 1030px) {
-    .reviews_slider_slide:nth-child(odd) {
+    .reviews_slider_slide:nth-child(odd) a {
         margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -1653,15 +1670,10 @@ a:hover {
 .swiper-slide,
 .swiper-slide {
     flex-shrink: 1;
-    /* width: 100%;
-    height: 100%; */
     position: relative;
     transition-property: transform;
     display: flex;
-    opacity: 0;
-    /* Исходная прозрачность */
-    transition: opacity 0.5s ease;
-    /* Плавный переход для прозрачности */
+    transition: opacity 1s ease;
 }
 
 @media (max-width: 1070px) {

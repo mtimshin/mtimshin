@@ -50,6 +50,29 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.add('active');
         });
     });
+
+    const swiper = new Swiper('.reviews .swiper', {
+        speed: 0,
+        loop: true,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.reviews_slider_next',
+            prevEl: '.reviews_slider_prev',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+            1030: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            }
+        }
+    })
 });
 
 
