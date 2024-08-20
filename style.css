@@ -1626,6 +1626,12 @@ div.reviews_slider_swiper {
 
 @media (max-width: 1030px) {
     .stages {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .stages {
         height: 40vh;
     }
 }
