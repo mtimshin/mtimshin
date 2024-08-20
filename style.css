@@ -433,7 +433,7 @@ h2 {
     font-weight: 200;
     letter-spacing: -0.036em;
     margin-left: -4px;
-    margin-top: -0.4%;
+    margin-top: 0.4vh;
 }
 
 @media (max-width: 1030px) {
@@ -948,6 +948,7 @@ a:hover {
 .services_list__item_cont {
     display: flex;
     height: 16vh;
+    margin-top: 0.7vh;
 }
 
 @media (max-width: 1030px) {
@@ -1300,7 +1301,7 @@ a:hover {
 
 @media (max-width: 1030px) {
     .reviews_slider {
-        margin: 10vh 0 10vh 0;
+        margin: 7vh 0 8.4vh 0;
         overflow: hidden;
     }
 }
@@ -1341,7 +1342,7 @@ div.reviews_slider_swiper {
 
     .reviews_slider_slide {
         width: 70vw;
-        height: 66vh;
+        height: 56vh;
     }
 }
 
@@ -1354,11 +1355,18 @@ div.reviews_slider_swiper {
 
 .reviews_slider_slide_play {
     position: absolute;
-    top: 45%;
+    top: 42%;
     left: 50%;
     transform: translateX(-50%);
+    width: 6vw;
     z-index: 3;
     opacity: 1;
+}
+
+@media (max-width: 1030px) {
+    .reviews_slider_slide_play {
+        width: 17vw;
+    }
 }
 
 .reviews_slider_slide_bg1 {
@@ -1378,7 +1386,7 @@ div.reviews_slider_swiper {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.66);
     z-index: 2;
 }
 
@@ -1432,7 +1440,7 @@ div.reviews_slider_swiper {
         background-color: transparent;
         background-position: left;
         width: 18vw;
-        height: 66vh;
+        height: 56vh;
         z-index: 10;
     }
 }
@@ -1457,7 +1465,7 @@ div.reviews_slider_swiper {
         background-color: transparent;
         background-position: right;
         width: 18vw;
-        height: 66vh;
+        height: 56vh;
         z-index: 10;
     }
 }
@@ -1636,14 +1644,14 @@ div.reviews_slider_swiper {
     height: 100%;
     z-index: 3;
     background-color: #0A0A0A;
-    opacity: 0.62;
+    opacity: 0.28;
     object-fit: cover;
 
 }
 
 .stages_play {
     position: absolute;
-    top: 42%;
+    top: 40%;
     left: 52%;
     transform: translateX(-50%);
     z-index: 4;
