@@ -249,6 +249,7 @@ input:-ms-input-placeholder {
 
 
 @media (max-width: 1030px) {
+
     #cases,
     #reviews,
     #stages {
@@ -592,12 +593,14 @@ a:hover {
 
 .header_menu li:nth-child(5) .link {
     padding-right: 0.9vw;
-    position: relative; /* Добавим относительное позиционирование */
+    position: relative;
+    /* Добавим относительное позиционирование */
 }
 
 .header_menu li:nth-child(5) .link:before {
     content: '';
-    position: absolute; /* Абсолютное позиционирование */
+    position: absolute;
+    /* Абсолютное позиционирование */
     top: 30%;
     right: -4%;
     transform: translateY(-50%);
@@ -605,12 +608,15 @@ a:hover {
     height: 0.64vw;
     background: url('img/target.svg') no-repeat center;
     background-size: cover;
-    opacity: 0; /* Скрываем пиктограмму по умолчанию */
-    transition: opacity 0.3s ease-in-out; /* Анимация прозрачности */
+    opacity: 0;
+    /* Скрываем пиктограмму по умолчанию */
+    transition: opacity 0.3s ease-in-out;
+    /* Анимация прозрачности */
 }
 
 .header_menu li:nth-child(5) .link:hover:before {
-    opacity: 1; /* Делаем пиктограмму видимой при наведении */
+    opacity: 1;
+    /* Делаем пиктограмму видимой при наведении */
 }
 
 
@@ -697,6 +703,7 @@ a:hover {
 }
 
 @keyframes bounce {
+
     0%,
     100% {
         transform: translate(-50%, 0);
@@ -1328,16 +1335,19 @@ div.reviews_slider_swiper {
     width: 20vw;
     height: 76vh;
 }
+
 .reviews_slider_slide.swiper-slide-active {
     opacity: 1;
 
 }
+
 @media (min-width: 1031px) {
     .reviews_slider_slide.swiper-slide-next {
         opacity: 1;
 
     }
 }
+
 @media (max-width: 1030px) {
 
     .reviews_slider_slide {
@@ -1420,6 +1430,7 @@ div.reviews_slider_swiper {
     }
 }
 
+
 .reviews_slider_prev {
     background-image: url('img/arrow-prev.svg');
     background-repeat: no-repeat;
@@ -1429,7 +1440,7 @@ div.reviews_slider_swiper {
     height: 80vh;
     border: none;
     cursor: pointer;
-    transition-duration: 0.4;
+    transition-duration: 0.6s;
 }
 
 @media (max-width: 1030px) {
@@ -1445,6 +1456,7 @@ div.reviews_slider_swiper {
     }
 }
 
+
 .reviews_slider_next {
     background-image: url('img/arrow-next.svg');
     background-repeat: no-repeat;
@@ -1454,7 +1466,7 @@ div.reviews_slider_swiper {
     height: 80vh;
     border: none;
     cursor: pointer;
-    transition-duration: 0.4;
+    transition-duration: 0.6s;
 }
 
 @media (max-width: 1030px) {
@@ -1478,6 +1490,7 @@ div.reviews_slider_swiper {
 .reviews_slider_slide a {
     position: relative;
 }
+
 .reviews_slider_slide:nth-child(odd) a {
     margin-top: 12vh;
     margin-bottom: -12vh;
@@ -1611,6 +1624,12 @@ div.reviews_slider_swiper {
     overflow: hidden;
 }
 
+@media (max-width: 1030px) {
+    .stages {
+        height: 40vh;
+    }
+}
+
 .stages h2 {
     position: relative;
     z-index: 5;
@@ -1623,6 +1642,12 @@ div.reviews_slider_swiper {
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+
+@media (max-width: 1030px) {
+    .stages_video {
+        object-fit: cover;
+    }
 }
 
 .stages_bg-ton1 {
@@ -1652,11 +1677,28 @@ div.reviews_slider_swiper {
 .stages_play {
     position: absolute;
     top: 40%;
-    left: 52%;
+    left: 54%;
     transform: translateX(-50%);
     z-index: 4;
-    width: 24vh;
 }
+
+@media (max-width: 1030px) {
+    .stages_play {
+        top: 34%;
+    }
+}
+
+
+.stages_play img {
+    width: 16vw;
+}
+
+@media (max-width: 1030px) {
+    .stages_play img {
+        width: 29vw;
+    }
+}
+
 
 
 
