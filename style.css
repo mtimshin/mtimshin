@@ -1707,8 +1707,54 @@ div.reviews_slider_swiper {
 
 
 
+/* PRICE */
 
 
+.header_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+@media (max-width: 1030px) {
+    .header_price {
+        padding: 0 3.4%;
+    }
+}
+
+
+.header_price h2 {
+    font-size: 16vw;
+    margin-left: -12px;
+    letter-spacing: -0.06em;
+}
+
+@media (max-width: 1030px) {
+    .header_price h2 {
+        font-size: 22vw;
+        margin-left: -4px;
+    }
+}
+
+.contacts_bottom_price {
+    position: relative;
+    width: 100%;
+    align-items: end;
+}
+
+.contacts_bottom_price img {
+    width: 3vw;
+}
+
+@media (max-width: 1030px) {
+    .contacts_bottom_price img {
+        width: 6vw;
+    }
+}
+
+.services_list_price {
+    margin-top: 2.4vh;
+}
 
 
 
