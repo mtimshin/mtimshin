@@ -311,17 +311,6 @@ html {
     overflow-x: hidden;
 }
 
-/* body {
-    background-image: url("img/puzyr1.svg");
-    background-repeat: no-repeat;
-} */
-
-@media (max-width: 1030px) {
-    body {
-        background-position: left 50% top 40%;
-    }
-}
-
 .stripe {
     height: 1px;
     background-color: white;
@@ -350,7 +339,6 @@ html {
 .cont-head {
     width: 100%;
     max-width: 3840px;
-    /* background-color: #0A0A0A; */
     margin: 0 auto;
     position: relative;
     padding: 0 1.4%;
@@ -362,6 +350,22 @@ html {
     .cont-head {
         width: 100%;
         padding: 0;
+    }
+}
+
+.cont-head-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    z-index: 10;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); 
+}
+
+@media (max-width: 1030px) {
+    .cont-head-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
     }
 }
 
