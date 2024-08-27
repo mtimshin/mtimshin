@@ -76,6 +76,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// Плавное появление фона у прилипающего меню
+
+const contHeadBg = document.querySelector('.cont-head-bg');
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition >= 200) {
+    contHeadBg.style.opacity = 1;
+    contHeadBg.style.transition = 'opacity 0.3s ease-in-out'; 
+  } else {
+    contHeadBg.style.opacity = 0;
+    contHeadBg.style.transition = 'opacity 0.3s ease-in-out'; 
+  }
+});
+
+// Скрываем элемент по умолчанию
+contHeadBg.style.opacity = 0; 
+
 
 
 
