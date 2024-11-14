@@ -1686,8 +1686,8 @@ div.reviews_slider_swiper {
 
 .stages_play {
     position: absolute;
-    top: 40%;
-    left: 54%;
+    top: 38%;
+    left: 52%;
     transform: translateX(-50%);
     z-index: 4;
 }
