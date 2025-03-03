@@ -13,24 +13,33 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#0A0A0A">
     <title>Максим Тимшин — Создание цифровых продуктов</title>
+
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="/js/lenis.min.js" defer></script>
+    <script src="/js/scroll-lock.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
+    <div class="preloader">
+        <img class="preloader__logo" src="img/logo.svg" alt="">
+    </div>
+
     <div class="cont-head">
         <header class="header">
             <a href="#"><img src="img/logo.svg" alt="Максим Тимшин — Создание цифровых продуктов"></a>
             <ul class="header_menu">
                 <li>
-                    <a href="#services" class="link">Услуги</a>
+                    <a href="#services" class="link cont-head-anchor">Услуги</a>
                 </li>
                 <li>
-                    <a href="#cases" class="link">Кейсы</a>
+                    <a href="#cases" class="link cont-head-anchor">Кейсы</a>
                 </li>
                 <li>
-                    <a href="#stages" class="link">Этапы</a>
+                    <a href="#stages" class="link cont-head-anchor">Этапы</a>
                 </li>
                 <li>
-                    <a href="#reviews" class="link">Рекомендации</a>
+                    <a href="#reviews" class="link cont-head-anchor">Рекомендации</a>
                 </li>
                 <li>
                     <a href="price.html" class="link" target="_blank">Цены</a>
@@ -48,14 +57,24 @@
             </a>
         </header>
     </div>
+
     <div class="first-screen">
         <h1>Максим Тимшин</h1>
         <img class="h1" src="img/H1.svg" alt="Максим Тимшин">
+        <picture>
+            <source srcset="img/bg-first-screen.webp" type="image/webp">
+            <img class="first-screen__bg" src="img/bg-first-screen.png" alt=""/>
+        </picture>
     </div>
     <div class="first-screen-mob">
         <img src="img/h1-mob.svg" alt="Максим Тимшин" class="h1-mob">
         <a href="#services"><img class="arrow-mob" src="img/arrow-bottom-mob.svg" alt="Услуги"></a>
+        <picture>
+            <source srcset="img/bg-first-screen-mob.webp" type="image/webp">
+            <img class="first-screen__bg" src="img/bg-first-screen-mob.png" alt=""/>
+        </picture>
     </div>
+
     <div class="cont">
         <div class="services" id="services">
             <div class="services_heading">
@@ -133,6 +152,7 @@
         </div>
 
     </div>
+
     <div class="cont">
         <div class="stripe">
         </div>
@@ -140,198 +160,314 @@
             <h2>Кейсы</h2>
             <ul class="cases_list">
                 <li>
-                    <a href="#" class="cases_list__item">
+                    <div class="cases_list__item" role="button" onclick="openModal('case-modal-1')">
                         <div class="cases_list__item_block1">
-                            <p>Маркетплейс для организаторов</p>
-                            <p> мероприятий</p>
+                            <p><span>Маркетплейс для организаторов</span></p>
+                            <p><span>мероприятий</span></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case1.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case1-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case1.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case1.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case1-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case1-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
-                    </a>
+                    </div>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_block1">
-                            <p>Лого для Электронприбор</p>
+                            <p><span>Лого для Электронприбор</span></p>
                             <p></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case2.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case2-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case2.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case2.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case2-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case2-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case3.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case3-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case3.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case3.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case3-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case3-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                         <div class="cases_list__item_block1">
-                            <p>Рекламная страница сервиса</p>
-                            <p>переводов крипты</p>
+                            <p><span>Рекламная страница сервиса</span></p>
+                            <p><span>переводов крипты</span></p>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_block1">
-                            <p>Интернет-магазин</p>
-                            <p>измерительного оборудования</p>
+                            <p><span>Интернет-магазин</span></p>
+                            <p><span>измерительного оборудования</span></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case4.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case4-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case4.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case4.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case4-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case4-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_block1">
-                            <p>Рекламная страница сервиса</p>
-                            <p>«Тревожная кнопка»</p>
+                            <p><span>Рекламная страница сервиса</span></p>
+                            <p><span>«Тревожная кнопка»</span></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case5.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case5-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case5.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case5.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case5-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case5-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_block1">
-                            <p>Рекламная страница и личный</p>
-                            <p>кабинет AI-сервиса </p>
+                            <p><span>Рекламная страница и личный</span></p>
+                            <p><span>кабинет AI-сервиса </span></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case6.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case6-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case6.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case6.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case6-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case6-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_block1">
-                            <p>Лого для провайдера</p>
-                            <p>Чехов-телеком</p>
+                            <p><span>Лого для провайдера</span></p>
+                            <p><span>Чехов-телеком</span></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case7.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case7-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case7.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case7.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case7-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case7-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case8.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case8-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case8.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case8.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case8-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case8-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                         <div class="cases_list__item_block1">
-                            <p>Лого для компании, торгующей </p>
-                            <p>деревянными полами</p>
+                            <p><span>Лого для компании, торгующей </span></p>
+                            <p><span>деревянными полами</span></p>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_block1">
-                            <p>Сервис по поиску и подбору</p>
-                            <p>провайдеров</p>
+                            <p><span>Сервис по поиску и подбору</span></p>
+                            <p><span>провайдеров</span></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case9.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case9-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case9.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case9.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case9-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case9-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="cases_list__item">
                         <div class="cases_list__item_block1">
-                            <p>Сайт аквапарка</p>
-                            <p>«Аквалэнд»</p>
+                            <p><span>Сайт аквапарка</span></p>
+                            <p><span>«Аквалэнд»</span></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <img class="cases_list__item_img_1" src="img/case10.png" alt="Скрин1">
-                            <img class="cases_list__item_img_2" src="img/case10-hov.png" alt="Скрин2">
+                            <picture>
+                                <source class="lazyImg" data-src="img/case10.webp" type="image/webp">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case10.png" alt="Скрин1"/>
+                            </picture>
+                            <picture>
+                                <source class="lazyImg" data-src="img/case10-hov.webp" type="image/webp">
+                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case10-hov.png" alt="Скрин2"/>
+                            </picture>
                         </div>
                     </a>
                 </li>
             </ul>
             <ul class="cases_list-mob">
                 <li>
-                    <a class="cases_list-mob_item" href="#">
+                    <div class="cases_list-mob_item" role="button" onclick="openModal('case-modal-1')">
                         <h3>Маркетплейс для организаторов мероприятий</h3>
-                        <img src="img/case1-mob.png" alt="скрин">
-                    </a>
+                        <picture>
+                            <source class="lazyImg" data-src="img/case1-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case1-mob.png" alt="скрин"/>
+                        </picture>
+                    </div>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Лого для Электронприбор</h3>
-                        <img src="img/case2-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case2-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case2-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Рекламная страница сервиса переводов крипты</h3>
-                        <img src="img/case3-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case3-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case3-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Интернет-магазин измерительного оборудования</h3>
-                        <img src="img/case4-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case4-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case4-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Рекламная страница сервиса «Тревожная кнопка»</h3>
-                        <img src="img/case5-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case5-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case5-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Рекламная страница и личный кабинет AI-сервиса</h3>
-                        <img src="img/case6-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case6-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case6-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Лого для провайдера Чехов-телеком</h3>
-                        <img src="img/case7-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case7-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case7-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Лого для компании, торгующей деревянными полами</h3>
-                        <img src="img/case8-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case8-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case8-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Сервис по подбору провайдеров</h3>
-                        <img src="img/case9-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case9-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case9-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
                 <li>
                     <a class="cases_list-mob_item" href="#">
                         <h3>Сайт аквапарка «Аквалэнд»</h3>
-                        <img src="img/case10-mob.png" alt="скрин">
+                        <picture>
+                            <source class="lazyImg" data-src="img/case10-mob.webp" type="image/webp">
+                            <img class="lazyImg" data-src="img/case10-mob.png" alt="скрин"/>
+                        </picture>
                     </a>
                 </li>
             </ul>
+
+            <div class="case-modal modal" id="case-modal-1" data-lenis-prevent data-scroll-lock-scrollable>
+                <div class="case-modal__header">
+                    <div role="button" class="case-modal__closer modal__closer">
+                        <img src="img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="case-modal__body">
+                    <picture>
+                        <source class="lazyImg" data-src="img/cases/test.webp" type="image/webp">
+                        <img class="lazyImg" data-src="img/cases/test.png" alt=""/>
+                    </picture>
+                    <picture>
+                        <source class="lazyImg" data-src="img/cases/test2.webp" type="image/webp">
+                        <img class="lazyImg" data-src="img/cases/test2.png" alt=""/>
+                    </picture>
+                    <picture>
+                        <source class="lazyImg" data-src="img/cases/test3.webp" type="image/webp">
+                        <img class="lazyImg" data-src="img/cases/test3.png" alt=""/>
+                    </picture>
+                    <picture>
+                        <source class="lazyImg" data-src="img/cases/test4.webp" type="image/webp">
+                        <img class="lazyImg" data-src="img/cases/test4.png" alt=""/>
+                    </picture>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="cont">
-        <div class="stripe" id="stages">
+        <div class="stripe">
         </div>
-        <div class="stages">
+        <div class="stages" id="stages">
             <h2>Этапы</h2>
             <a href="#" class="stages_play"><img src="img/play_stages.svg" alt="play"></a>
-            <video autoplay muted loop src="bg-video.mp4" class="stages_video"></video>
+            <video autoplay muted loop data-src="bg-video.mp4" class="stages_video lazyImg"></video>
             <img src="img/bg-stages.svg" alt="тонировка" class="stages_bg-ton1">
             <div class="stages_bg-ton2"></div>
         </div>
@@ -355,7 +491,10 @@
                                     <p>руководитель отдела сервиса компании «RVS»</p>
                                 </div>
                                 <div class="reviews_slider_slide_bg2"></div>
-                                <img src="img/review1.png" alt="отзыв" class="reviews_slider_slide_bg1">
+                                <picture>
+                                    <source class="lazyImg" data-src="img/review1.webp" type="image/webp">
+                                    <img class="reviews_slider_slide_bg1 lazyImg" data-src="img/review1.png" alt="отзыв"/>
+                                </picture>
                             </a>
                         </div>
                         <div class="reviews_slider_slide swiper-slide">
@@ -366,7 +505,10 @@
                                     <p>руководитель отдела сервиса компании «RVS»</p>
                                 </div>
                                 <div class="reviews_slider_slide_bg2"></div>
-                                <img src="img/review1.png" alt="отзыв" class="reviews_slider_slide_bg1">
+                                <picture>
+                                    <source class="lazyImg" data-src="img/review1.webp" type="image/webp">
+                                    <img class="reviews_slider_slide_bg1 lazyImg" data-src="img/review1.png" alt="отзыв"/>
+                                </picture>
                             </a>
                         </div>
                         <div class="reviews_slider_slide  swiper-slide">
@@ -377,7 +519,10 @@
                                     <p>руководитель отдела сервиса компании «RVS»</p>
                                 </div>
                                 <div class="reviews_slider_slide_bg2"></div>
-                                <img src="img/review1.png" alt="отзыв" class="reviews_slider_slide_bg1">
+                                <picture>
+                                    <source class="lazyImg" data-src="img/review1.webp" type="image/webp">
+                                    <img class="reviews_slider_slide_bg1 lazyImg" data-src="img/review1.png" alt="отзыв"/>
+                                </picture>
                             </a>
                         </div>
                         <div class="reviews_slider_slide swiper-slide">
@@ -388,7 +533,10 @@
                                     <p>руководитель отдела сервиса компании «RVS»</p>
                                 </div>
                                 <div class="reviews_slider_slide_bg2"></div>
-                                <img src="img/review1.png" alt="отзыв" class="reviews_slider_slide_bg1">
+                                <picture>
+                                    <source class="lazyImg" data-src="img/review1.webp" type="image/webp">
+                                    <img class="reviews_slider_slide_bg1 lazyImg" data-src="img/review1.png" alt="отзыв"/>
+                                </picture>
                             </a>
                         </div>
                         <div class="reviews_slider_slide  swiper-slide">
@@ -399,7 +547,10 @@
                                     <p>руководитель отдела сервиса компании «RVS»</p>
                                 </div>
                                 <div class="reviews_slider_slide_bg2"></div>
-                                <img src="img/review1.png" alt="отзыв" class="reviews_slider_slide_bg1">
+                                <picture>
+                                    <source class="lazyImg" data-src="img/review1.webp" type="image/webp">
+                                    <img class="reviews_slider_slide_bg1 lazyImg" data-src="img/review1.png" alt="отзыв"/>
+                                </picture>
                             </a>
                         </div>
                         <div class="reviews_slider_slide swiper-slide">
@@ -410,7 +561,10 @@
                                     <p>руководитель отдела сервиса компании «RVS»</p>
                                 </div>
                                 <div class="reviews_slider_slide_bg2"></div>
-                                <img src="img/review1.png" alt="отзыв" class="reviews_slider_slide_bg1">
+                                <picture>
+                                    <source class="lazyImg" data-src="img/review1.webp" type="image/webp">
+                                    <img class="reviews_slider_slide_bg1 lazyImg" data-src="img/review1.png" alt="отзыв"/>
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -482,41 +636,5 @@
         </div>
     </div>
     <!-- Конец "Попап с выпадом меню бургер" -->
-
-    <script src="js.js"></script>
-    <script src="swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
-        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
-    <script>
-        SmoothScroll({
-            // Время скролла 400 = 0.4 секунды
-            animationTime: 1000,
-            // Размер шага в пикселях
-            stepSize: 75,
-
-            // Дополнительные настройки:
-
-            // Ускорение
-            accelerationDelta: 30,
-            // Максимальное ускорение
-            accelerationMax: 2,
-
-            // Поддержка клавиатуры
-            keyboardSupport: true,
-            // Шаг скролла стрелками на клавиатуре в пикселях
-            arrowScroll: 50,
-
-            // Pulse (less tweakable)
-            // ratio of "tail" to "acceleration"
-            pulseAlgorithm: true,
-            pulseScale: 4,
-            pulseNormalize: 1,
-
-            // Поддержка тачпада
-            touchpadSupport: true,
-        })
-    </script>
-
 </body>
-
 </html>
