@@ -158,6 +158,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
+
 // Скрываем элемент по умолчанию
 contHeadBg.style.opacity = 0;
 
