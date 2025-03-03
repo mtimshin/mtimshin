@@ -1126,6 +1126,11 @@ a:hover {
     /* Для позиционирования элементов */
     cursor: pointer;
     pointer-events: none;
+    transition: opacity .5s;
+}
+
+.cases_list__item:hover {
+    opacity: 0.5;
 }
 
 .cases_list__item p span, .cases_list__item img {
