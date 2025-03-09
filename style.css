@@ -281,9 +281,7 @@ html.lenis {
 /* Стилизация "ползунка" (thumb) */
 ::-webkit-scrollbar-thumb {
     background-color: #888;
-    /* Цвет ползунка */
     border-radius: 6px;
-    /* Закругленные углы */
     transition-duration: 0.4s;
 }
 
