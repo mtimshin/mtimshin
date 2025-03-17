@@ -60,10 +60,7 @@
     <div class="first-screen">
         <h1>Максим Тимшин</h1>
         <img class="h1" src="img/H1.svg" alt="Максим Тимшин" />
-        <picture>
-            <source srcset="img/bg-first-screen.webp" type="image/webp" />
-            <img class="first-screen__bg" src="img/bg-first-screen.png" alt="Maxim Timshin" />
-        </picture>
+        <img class="first-screen__bg lazyImg" data-src="img/bg-first-screen.webp" alt="Maxim Timshin" />
     </div>
     <div class="first-screen-mob">
         <h1>Максим Тимшин</h1>
@@ -71,7 +68,7 @@
         <a href="#services"><img class="arrow-mob" src="img/arrow-bottom-mob.svg" alt="Услуги" /></a>
         <picture>
             <source srcset="img/bg-first-screen-mob.webp" type="image/webp" />
-            <img class="first-screen__bg" src="img/bg-first-screen-mob.png" alt="" />
+            <img class="first-screen__bg lazyImg" data-src="img/bg-first-screen-mob.png" alt="" />
         </picture>
     </div>
 
@@ -174,14 +171,8 @@
                             <p><span>мероприятий</span></p>
                         </div>
                         <div class="cases_list__item_img1">
-                            <picture>
-                                <source class="lazyImg" data-src="img/case1.webp" type="image/webp" />
-                                <img class="cases_list__item_img_1 lazyImg" data-src="img/case1.png" alt="Скрин1" />
-                            </picture>
-                            <picture>
-                                <source class="lazyImg" data-src="img/case1-hov.webp" type="image/webp" />
-                                <img class="cases_list__item_img_2 lazyImg" data-src="img/case1-hov.png" alt="Скрин2" />
-                            </picture>
+                            <img class="cases_list__item_img_1 lazyImg" data-src="img/case1.png" alt="Скрин1" />
+                            <img class="cases_list__item_img_2 lazyImg" data-src="img/case1-hov.png" alt="Скрин2" />
                         </div>
                     </div>
                 </li>
