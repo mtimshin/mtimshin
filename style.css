@@ -595,6 +595,7 @@ a:hover {
     width: 3.8vw;
 }
 
+
 .header_menu {
     width: auto;
     display: flex;
@@ -602,31 +603,19 @@ a:hover {
     padding-right: 5vw;
 }
 
-/* .header_menu li:nth-child(5) .link {
-    padding-right: 0.9vw;
+.price-page .header_menu {
+    padding-right: 0;
 }
 
-.header_menu li:nth-child(5) .link:hover {
-    background: url('img/target.svg') no-repeat right -0.06vw top;
-    background-size: 0.7vw;
-    transform: scale(0.5);
-    transition: transform 0.3s ease-in-out;
-}
-
-.header_menu li:nth-child(5) .link:hover .link {
-    transform: scale(0.5);
-} */
 
 .header_menu li:nth-child(5) .link {
     padding-right: 0.9vw;
     position: relative;
-    /* Добавим относительное позиционирование */
 }
 
 .header_menu li:nth-child(5) .link:before {
     content: '';
     position: absolute;
-    /* Абсолютное позиционирование */
     top: 30%;
     right: -4%;
     transform: translateY(-50%);
@@ -927,6 +916,18 @@ a:hover {
         margin: 26% 0 0 0;
     }
 }
+
+.price-page .services {
+    margin: 5% 0 0 0;
+}
+
+@media (max-width: 1030px) {
+    .price-page .services {
+        margin: 8% 0 0 0;
+    }
+}
+
+
 
 .services_puzyr1 {
     position: absolute;
@@ -1785,11 +1786,13 @@ div.reviews_slider_swiper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-top: 20%;
 }
 
 @media (max-width: 1030px) {
     .header_price {
         padding: 0 3.4%;
+        margin-top: 30%;
     }
 }
 
