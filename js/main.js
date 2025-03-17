@@ -1,5 +1,5 @@
 /* Прелоадер */
-;(function (){
+; (function () {
     window.addEventListener("load", function () {
         const preloader = document.querySelector('.preloader');
         if (preloader) {
@@ -11,134 +11,134 @@
     });
 }())
 
-/* lazy loading */
-;(function (){
-    const options = {
-        // родитель целевого элемента - область просмотра
-        root: null,
-        // без отступов
-        rootMargin: '100% 0px 100% 0px',
-        // процент пересечения - половина изображения
-        threshold: 0
-    }
+    /* lazy loading */
+    ; (function () {
+        const options = {
+            // родитель целевого элемента - область просмотра
+            root: null,
+            // без отступов
+            rootMargin: '100% 0px 100% 0px',
+            // процент пересечения - половина изображения
+            threshold: 0
+        }
 
-    // создаем наблюдатель
-    const observer = new IntersectionObserver((entries, observer) => {
-        // для каждой записи-целевого элемента
-        entries.forEach(entry => {
-            // если элемент является наблюдаемым
-            if (entry.isIntersecting) {
-                const lazyImg = entry.target
+        // создаем наблюдатель
+        const observer = new IntersectionObserver((entries, observer) => {
+            // для каждой записи-целевого элемента
+            entries.forEach(entry => {
+                // если элемент является наблюдаемым
+                if (entry.isIntersecting) {
+                    const lazyImg = entry.target
 
-                let dataSrc = lazyImg.getAttribute(['data-src'])
+                    let dataSrc = lazyImg.getAttribute(['data-src'])
 
-                if (lazyImg.tagName === "IMG" || lazyImg.tagName === "VIDEO") {
-                    lazyImg.setAttribute('src', dataSrc)
-                } else if (lazyImg.tagName === "SOURCE") {
-                    lazyImg.setAttribute('srcset', dataSrc)
-                } else {
-                    lazyImg.style.backgroundImage = 'url("' + dataSrc + '")'
+                    if (lazyImg.tagName === "IMG" || lazyImg.tagName === "VIDEO") {
+                        lazyImg.setAttribute('src', dataSrc)
+                    } else if (lazyImg.tagName === "SOURCE") {
+                        lazyImg.setAttribute('srcset', dataSrc)
+                    } else {
+                        lazyImg.style.backgroundImage = 'url("' + dataSrc + '")'
+                    }
+
+                    // прекращаем наблюдение
+                    observer.unobserve(lazyImg)
                 }
+            })
+        }, options)
 
-                // прекращаем наблюдение
-                observer.unobserve(lazyImg)
-            }
+        const arr = document.querySelectorAll('.lazyImg[data-src]') // будет работать с данными элементами
+        arr.forEach(i => {
+            observer.observe(i)
         })
-    }, options)
-
-    const arr = document.querySelectorAll('.lazyImg[data-src]') // будет работать с данными элементами
-    arr.forEach(i => {
-        observer.observe(i)
-    })
-}())
+    }())
 
 window.scrollLock.setFillGapMethod('none') // Changes the method of filling the right page gap.
 
-/* Lenis */
-;(function (){
-    const lenisHeader = document.querySelector('.cont-head-bg');
+    /* Lenis */
+    ; (function () {
+        const lenisHeader = document.querySelector('.cont-head-bg');
 
-    new Lenis({
-        autoRaf: true,
-        anchors: {
-            offset: lenisHeader ? -lenisHeader.offsetHeight : 0
-        },
-    });
-}())
-
-/* Якоря */
-;(function (){
-    const anchors = Array.from(document.querySelectorAll('.cont-head-anchor')).map((item) => {
-        return {
-            link: item,
-            section: document.querySelector(item.getAttribute('href'))
-        }
-    }).reverse()
-
-    function updateActiveLink() {
-        let isFound = false
-
-        anchors.forEach((item) => {
-            if (item.section.getBoundingClientRect().top < window.innerHeight / 2 &&
-                item.section.getBoundingClientRect().bottom > 0 && !isFound) {
-                item.link.classList.add('active')
-                isFound = true
-            } else {
-                item.link.classList.remove('active')
-            }
-
-        })
-    }
-    window.addEventListener('scroll', updateActiveLink);
-}())
-
-;(function (){
-
-}())
-
-/* Услуги */
-;(function (){
-    const items = document.querySelectorAll('.services_list__item_stripe');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate'); // Добавляем класс для анимации
-                observer.unobserve(entry.target); // Убираем наблюдение после анимации
-            }
-        });
-    });
-
-    items.forEach(item => {
-        observer.observe(item); // Наблюдаем за каждым элементом списка
-    });
-}())
-
-/* Рекомендации */
-;(function (){
-    new Swiper('.reviews .swiper', {
-        loop: true,
-        speed: 800,
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        simulateTouch: false,
-        navigation: {
-            nextEl: '.reviews_slider_next',
-            prevEl: '.reviews_slider_prev',
-        },
-
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
+        new Lenis({
+            autoRaf: true,
+            anchors: {
+                offset: lenisHeader ? -lenisHeader.offsetHeight : 0
             },
-            1030: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
+        });
+    }())
+
+    /* Якоря */
+    ; (function () {
+        const anchors = Array.from(document.querySelectorAll('.cont-head-anchor')).map((item) => {
+            return {
+                link: item,
+                section: document.querySelector(item.getAttribute('href'))
             }
+        }).reverse()
+
+        function updateActiveLink() {
+            let isFound = false
+
+            anchors.forEach((item) => {
+                if (item.section.getBoundingClientRect().top < window.innerHeight / 2 &&
+                    item.section.getBoundingClientRect().bottom > 0 && !isFound) {
+                    item.link.classList.add('active')
+                    isFound = true
+                } else {
+                    item.link.classList.remove('active')
+                }
+
+            })
         }
-    })
-}())
+        window.addEventListener('scroll', updateActiveLink);
+    }())
+
+    ; (function () {
+
+    }())
+
+    /* Услуги */
+    ; (function () {
+        const items = document.querySelectorAll('.services_list__item_stripe');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate'); // Добавляем класс для анимации
+                    observer.unobserve(entry.target); // Убираем наблюдение после анимации
+                }
+            });
+        });
+
+        items.forEach(item => {
+            observer.observe(item); // Наблюдаем за каждым элементом списка
+        });
+    }())
+
+    /* Рекомендации */
+    ; (function () {
+        new Swiper('.reviews .swiper', {
+            loop: true,
+            speed: 800,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            simulateTouch: false,
+            navigation: {
+                nextEl: '.reviews_slider_next',
+                prevEl: '.reviews_slider_prev',
+            },
+
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                },
+                1030: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                }
+            }
+        })
+    }())
 
 
 
@@ -164,29 +164,71 @@ window.addEventListener('scroll', () => {
 contHeadBg.style.opacity = 0;
 
 // Modals
+// function openModal(modalId) {
+//     const modal = document.getElementById(modalId)
+//     const closer = modal.querySelector('.modal__closer')
+
+//     if (!modal) return
+
+//     modal.classList.add('displayed')
+//     modal.scrollTop = 0
+//     window.scrollLock.disablePageScroll();
+//     setTimeout(() => {
+//         modal.classList.add('visible')
+//     })
+
+//     if (closer) {
+//         closer.addEventListener('click', closeModal)
+//     }
+
+//     function closeModal() {
+//         closer.removeEventListener('click', closeModal)
+//         modal.classList.remove('visible')
+//         setTimeout(() => {
+//             modal.classList.remove('displayed')
+//             window.scrollLock.enablePageScroll();
+//         }, 500)
+//     }
+// }
+
+// Modals
 function openModal(modalId) {
-    const modal = document.getElementById(modalId)
-    const closer = modal.querySelector('.modal__closer')
+    const modal = document.getElementById(modalId);
+    const closer = modal.querySelector('.modal__closer');
+    const iframe = document.getElementById('kinescopeIframe'); // Находим iframe
 
-    if (!modal) return
+    if (!modal) return;
 
-    modal.classList.add('displayed')
-    modal.scrollTop = 0
+    modal.classList.add('displayed');
+    modal.scrollTop = 0;
     window.scrollLock.disablePageScroll();
     setTimeout(() => {
-        modal.classList.add('visible')
-    })
+        modal.classList.add('visible');
+        // Запускаем видео после того, как модальное окно стало видимым
+        if (iframe) {
+            iframe.contentWindow.postMessage('play', 'https://kinescope.io');
+            console.log('Sending play message to Kinescope'); // Для отладки
+        }
+    }, 500); // Задержка должна совпадать с длительностью анимации появления
 
     if (closer) {
-        closer.addEventListener('click', closeModal)
+        closer.addEventListener('click', closeModal);
     }
 
-    function closeModal()  {
-        closer.removeEventListener('click', closeModal)
-        modal.classList.remove('visible')
+    function closeModal() {
+        closer.removeEventListener('click', closeModal);
+        modal.classList.remove('visible');
+
+        // Останавливаем видео перед тем, как модальное окно скроется
+        if (iframe) {
+            iframe.contentWindow.postMessage('pause', 'https://kinescope.io');
+            console.log('Sending pause message to Kinescope'); // Для отладки
+        }
+
         setTimeout(() => {
-            modal.classList.remove('displayed')
+            modal.classList.remove('displayed');
             window.scrollLock.enablePageScroll();
-        }, 500)
+        }, 500); // Задержка должна совпадать с длительностью анимации исчезновения
     }
 }
+

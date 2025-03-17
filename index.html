@@ -459,14 +459,14 @@
             <div class="stages_bg-ton2"></div>
             <div class="case-modal modal" id="case-modal-video" data-lenis-prevent data-scroll-lock-scrollable>
                 <div class="case-modal__header">
-                    <div role="button" class="case-modal__closer modal__closer">
+                    <div role="button" class="case-modal__closer modal__closer" onclick="closeModal('case-modal-video')">
                         <img src="img/close.svg" alt="" />
                     </div>
                 </div>
                 <div class="case-modal__body">
                     <div style="position: relative; padding-top: 56.25%; width: 100%">
-                        <iframe class="lazyImg" data-src="https://kinescope.io/embed/4aadtYYf559k7TNYatKSsC"
-                            allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                        <iframe id="kinescopeIframe" src="https://kinescope.io/embed/4aadtYYf559k7TNYatKSsC"
+                            allow="fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
                             frameborder="0" allowfullscreen style="
                   position: absolute;
                   width: 100%;
