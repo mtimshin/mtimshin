@@ -890,8 +890,6 @@ a:hover {
 
 .case-modal__body {
     display: grid;
-    grid-gap: 40px;
-
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 24px 100px;
@@ -899,7 +897,6 @@ a:hover {
 
 .case-modal__body img {
     width: 100%;
-    height: 800px;
     object-fit: cover;
 }
 /* end Модалка кейсов */
