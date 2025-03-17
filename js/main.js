@@ -164,71 +164,30 @@ window.addEventListener('scroll', () => {
 contHeadBg.style.opacity = 0;
 
 // Modals
-// function openModal(modalId) {
-//     const modal = document.getElementById(modalId)
-//     const closer = modal.querySelector('.modal__closer')
-
-//     if (!modal) return
-
-//     modal.classList.add('displayed')
-//     modal.scrollTop = 0
-//     window.scrollLock.disablePageScroll();
-//     setTimeout(() => {
-//         modal.classList.add('visible')
-//     })
-
-//     if (closer) {
-//         closer.addEventListener('click', closeModal)
-//     }
-
-//     function closeModal() {
-//         closer.removeEventListener('click', closeModal)
-//         modal.classList.remove('visible')
-//         setTimeout(() => {
-//             modal.classList.remove('displayed')
-//             window.scrollLock.enablePageScroll();
-//         }, 500)
-//     }
-// }
-
-// Modals
 function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    const closer = modal.querySelector('.modal__closer');
-    const iframe = document.getElementById('kinescopeIframe'); // Находим iframe
+    const modal = document.getElementById(modalId)
+    const closer = modal.querySelector('.modal__closer')
 
-    if (!modal) return;
+    if (!modal) return
 
-    modal.classList.add('displayed');
-    modal.scrollTop = 0;
+    modal.classList.add('displayed')
+    modal.scrollTop = 0
     window.scrollLock.disablePageScroll();
     setTimeout(() => {
-        modal.classList.add('visible');
-        // Запускаем видео после того, как модальное окно стало видимым
-        if (iframe) {
-            iframe.contentWindow.postMessage('play', 'https://kinescope.io');
-            console.log('Sending play message to Kinescope'); // Для отладки
-        }
-    }, 500); // Задержка должна совпадать с длительностью анимации появления
+        modal.classList.add('visible')
+    })
 
     if (closer) {
-        closer.addEventListener('click', closeModal);
+        closer.addEventListener('click', closeModal)
     }
 
     function closeModal() {
-        closer.removeEventListener('click', closeModal);
-        modal.classList.remove('visible');
-
-        // Останавливаем видео перед тем, как модальное окно скроется
-        if (iframe) {
-            iframe.contentWindow.postMessage('pause', 'https://kinescope.io');
-            console.log('Sending pause message to Kinescope'); // Для отладки
-        }
-
+        closer.removeEventListener('click', closeModal)
+        modal.classList.remove('visible')
         setTimeout(() => {
-            modal.classList.remove('displayed');
+            modal.classList.remove('displayed')
             window.scrollLock.enablePageScroll();
-        }, 500); // Задержка должна совпадать с длительностью анимации исчезновения
+        }, 500)
     }
 }
 
