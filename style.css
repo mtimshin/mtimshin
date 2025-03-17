@@ -869,11 +869,10 @@ a:hover {
 .case-modal__header {
     position: sticky;
     top: 0;
-
     display: flex;
     justify-content: flex-end;
-
     padding: 40px;
+    z-index: 100;
 }
 
 .case-modal__closer {
