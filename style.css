@@ -475,7 +475,7 @@ h2 {
 }
 
 h1 {
-    font-size: 0.01px;
+    font-size: 0.001px;
 }
 
 a {
@@ -663,8 +663,12 @@ a:hover {
         /* background-color: #0A0A0A; */
         margin: 0 auto;
         position: relative;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
+}
+
+.first-screen-mob .first-screen__bg {
+    width: 100%;
 }
 
 .header-mob {
@@ -883,15 +887,19 @@ a:hover {
     cursor: pointer;
 }
 
+
 .case-modal__closer img {
     width: 100%;
 }
 
+.case-modal__wrapper {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 6% 100px;
+}
+
 .case-modal__body {
     display: grid;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 24px 100px;
 }
 
 .case-modal__body img {
@@ -1754,6 +1762,7 @@ div.reviews_slider_swiper {
     left: 52%;
     transform: translateX(-50%);
     z-index: 4;
+    cursor: pointer;
 }
 
 @media (max-width: 1030px) {

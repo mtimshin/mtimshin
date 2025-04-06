@@ -41,11 +41,35 @@
         </header>
         <div class="cont-head-bg"></div>
         <header class="header-mob">
-            <a href="index.html">
+            <a href="#first">
                 <img src="img/logo.svg" alt="Максим Тимшин — Проводник в мир интерфейсов" /></a>
-            <a href="#menu-drop">
+            <a onclick="openModal('case-modal_menu-drop')">
                 <img src="img/burger.svg" alt="Меню" />
             </a>
+            <div class="case-modal modal" id="case-modal_menu-drop" data-lenis-prevent data-scroll-lock-scrollable>
+                <div class="header-mob">
+                    <img src="img/logo.svg" alt="Максим Тимшин — Создание цифровых продуктов" />
+                    <a href="#closeModal">
+                        <img src="img/close.svg" alt="Меню" />
+                    </a>
+                </div>
+                <a href="#closeModal" class="popup_close"></a>
+                <a href="#closeModal" class="popup_area"></a>
+                <div class="popup_menu__body_links">
+                    <div class="popup_menu__body_links_1">
+                        <a href="#cases">Кейсы</a>
+                        <a href="#services">Услуги</a>
+                    </div>
+                    <div class="popup_menu__body_links_2">
+                        <a href="#reviews">Отзывы</a>
+                        <a href="price.html" target="_blank">Цены</a>
+                    </div>
+                </div>
+                <div class="popup_menu__body_btn">
+                    <a href="#contacts" class="btn">Связаться со мной</a>
+                    <a href="#stages" class="btn">Этапы работ</a>
+                </div>
+            </div>
         </header>
     </div>
 
@@ -149,7 +173,7 @@
         </footer>
     </div>
     <!-- Попап с выпадом меню бургер -->
-    <div class="popup_menu-drop" id="menu-drop">
+    <!-- <div class="popup_menu-drop" id="menu-drop">
         <div class="header-mob">
             <img src="img/logo.svg" alt="Максим Тимшин — Создание цифровых продуктов" />
             <a href="#closeModal">
@@ -172,7 +196,7 @@
             <a href="#contacts" class="btn">Связаться со мной</a>
             <a href="#stages" class="btn">Этапы работ</a>
         </div>
-    </div>
+    </div> -->
     <!-- Конец "Попап с выпадом меню бургер" -->
 </body>
 

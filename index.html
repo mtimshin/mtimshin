@@ -51,9 +51,33 @@
         <header class="header-mob">
             <a href="#first">
                 <img src="img/logo.svg" alt="Максим Тимшин — Проводник в мир интерфейсов" /></a>
-            <a href="#menu-drop">
+            <a onclick="openModal('case-modal_menu-drop')">
                 <img src="img/burger.svg" alt="Меню" />
             </a>
+            <div class="case-modal modal" id="case-modal_menu-drop" data-lenis-prevent data-scroll-lock-scrollable>
+                <div class="header-mob">
+                    <img src="img/logo.svg" alt="Максим Тимшин — Создание цифровых продуктов" />
+                    <a href="#closeModal">
+                        <img src="img/close.svg" alt="Меню" />
+                    </a>
+                </div>
+                <a href="#closeModal" class="popup_close"></a>
+                <a href="#closeModal" class="popup_area"></a>
+                <div class="popup_menu__body_links">
+                    <div class="popup_menu__body_links_1">
+                        <a href="#cases">Кейсы</a>
+                        <a href="#services">Услуги</a>
+                    </div>
+                    <div class="popup_menu__body_links_2">
+                        <a href="#reviews">Отзывы</a>
+                        <a href="price.html" target="_blank">Цены</a>
+                    </div>
+                </div>
+                <div class="popup_menu__body_btn">
+                    <a href="#contacts" class="btn">Связаться со мной</a>
+                    <a href="#stages" class="btn">Этапы работ</a>
+                </div>
+            </div>
         </header>
     </div>
 
@@ -66,10 +90,7 @@
         <h1>Максим Тимшин</h1>
         <img src="img/h1-mob.svg" alt="Максим Тимшин" class="h1-mob" />
         <a href="#services"><img class="arrow-mob" src="img/arrow-bottom-mob.svg" alt="Услуги" /></a>
-        <picture>
-            <source srcset="img/bg-first-screen-mob.webp" type="image/webp" />
-            <img class="first-screen__bg" src="img/bg-first-screen-mob.png" alt="Максим Тимшин" />
-        </picture>
+        <img class="first-screen__bg" src="img/bg-first-screen-mob.png" alt="Максим Тимшин" />
     </div>
 
     <div class="cont">
@@ -438,16 +459,19 @@
                         <img src="img/close.svg" alt="" />
                     </div>
                 </div>
-                <div class="case-modal__body">
-                    <img class="lazyImg" data-src="img/cases/test.webp" alt="" />
-                    <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
-                            src="https://kinescope.io/embed/tcsbNetr3CHLH927njhkbo"
-                            allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
-                            frameborder="0" allowfullscreen
-                            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe></div>
-                    <img class="lazyImg" data-src="img/cases/test2.webp" alt="" />
-                    <img class="lazyImg" data-src="img/cases/test3.webp" alt="" />
-                    <img class="lazyImg" data-src="img/cases/test4.webp" alt="" />
+                <div class="case-modal__wrapper">
+                    <div class="case-modal__body">
+                        <img class="lazyImg" data-src="img/cases/test.webp" alt="" />
+                        <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
+                                data-src="https://kinescope.io/embed/tcsbNetr3CHLH927njhkbo"
+                                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                                frameborder="0" allowfullscreen
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe></div>
+                        <img class="lazyImg" data-src="img/cases/test2.webp" alt="" />
+                        <img class="lazyImg" data-src="img/cases/test3.webp" alt="" />
+                        <img class="lazyImg" data-src="img/cases/test4.webp" alt="" />
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -457,8 +481,9 @@
         <div class="stripe"></div>
         <div class="stages" id="stages">
             <h2>Этапы</h2>
-            <a href="#case-modal-video" class="stages_play" role="button" onclick="openModal('case-modal-video')"><img
-                    src="img/play_stages.svg" alt="play" /></a>
+            <a class="stages_play" role="button" onclick="openModal('case-modal-video')">
+                <img src="img/play_stages.svg" alt="play" />
+            </a>
             <video autoplay muted loop data-src="bg-video.mp4" class="stages_video lazyImg"></video>
             <img src="img/bg-stages.svg" alt="тонировка" class="stages_bg-ton1" />
             <div class="stages_bg-ton2"></div>
@@ -468,12 +493,15 @@
                         <img src="img/close.svg" alt="" />
                     </div>
                 </div>
-                <div class="case-modal__body">
-                    <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
-                            src="https://kinescope.io/embed/p2VvrZj8NA4W3fyDjZPuU9"
-                            allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
-                            frameborder="0" allowfullscreen
-                            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe></div>
+                <div class="case-modal__wrapper">
+                    <div class="case-modal__body">
+                        <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
+                                data-src="https://kinescope.io/embed/p2VvrZj8NA4W3fyDjZPuU9?autoplay=1"
+                                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                                frameborder="0" allowfullscreen
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe></div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -621,7 +649,7 @@
     </div>
 
     <!-- Попап с выпадом меню бургер -->
-    <div class="popup_menu-drop" id="menu-drop">
+    <!-- <div class="popup_menu-drop" id="menu-drop">
         <div class="header-mob">
             <img src="img/logo.svg" alt="Максим Тимшин — Создание цифровых продуктов" />
             <a href="#closeModal">
@@ -644,7 +672,7 @@
             <a href="#contacts" class="btn">Связаться со мной</a>
             <a href="#stages" class="btn">Этапы работ</a>
         </div>
-    </div>
+    </div> -->
     <!-- Конец "Попап с выпадом меню бургер" -->
 </body>
 

@@ -32,7 +32,7 @@
 
                     let dataSrc = lazyImg.getAttribute(['data-src'])
 
-                    if (lazyImg.tagName === "IMG" || lazyImg.tagName === "VIDEO") {
+                    if (lazyImg.tagName === "IMG" || lazyImg.tagName === "VIDEO" || lazyImg.tagName === "IFRAME") {
                         lazyImg.setAttribute('src', dataSrc)
                     } else if (lazyImg.tagName === "SOURCE") {
                         lazyImg.setAttribute('srcset', dataSrc)
@@ -166,7 +166,6 @@ contHeadBg.style.opacity = 0;
 // Modals
 function openModal(modalId) {
     const modal = document.getElementById(modalId)
-    const closer = modal.querySelector('.modal__closer')
 
     if (!modal) return
 
@@ -176,18 +175,40 @@ function openModal(modalId) {
     setTimeout(() => {
         modal.classList.add('visible')
     })
+    initKinescopeVideos(modal)
 
-    if (closer) {
-        closer.addEventListener('click', closeModal)
+    modal.addEventListener('click', modalClickHandler)
+
+    function modalClickHandler(e) {
+        if (!e.target.closest('.case-modal__body')) {
+            modal.removeEventListener('click', modalClickHandler)
+            closeModal()
+        }
     }
 
     function closeModal() {
-        closer.removeEventListener('click', closeModal)
         modal.classList.remove('visible')
         setTimeout(() => {
+            stopKinescopeVideos(modal)
             modal.classList.remove('displayed')
             window.scrollLock.enablePageScroll();
         }, 500)
     }
+}
+
+const initKinescopeVideos = (wrapper) => {
+    let iframes = wrapper.querySelectorAll('iframe[data-src*="kinescope.io"]');
+
+    iframes.forEach((iframe) => {
+        iframe.src = iframe.getAttribute(['data-src'])
+    })
+}
+
+const stopKinescopeVideos = (wrapper) => {
+    let iframes = wrapper.querySelectorAll('iframe[data-src*="kinescope.io"]');
+
+    iframes.forEach((iframe) => {
+        iframe.src = '';
+    })
 }
 
