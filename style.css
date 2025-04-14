@@ -443,14 +443,14 @@ p {
 h3 {
     text-decoration: none;
     color: white;
-    font-size: 1.6vw;
+    font-size: 1.3vw;
     font-weight: 400;
     letter-spacing: -0.01em;
 }
 
 @media (max-width: 1030px) {
     h3 {
-        font-size: 4vw;
+        font-size: 3.5vw;
         font-weight: 400;
         letter-spacing: -0.005em;
     }
@@ -459,7 +459,7 @@ h3 {
 h2 {
     text-decoration: none;
     color: white;
-    font-size: 6.6vw;
+    font-size: 5vw;
     font-weight: 200;
     letter-spacing: -0.036em;
     margin-left: -4px;
@@ -468,7 +468,7 @@ h2 {
 
 @media (max-width: 1030px) {
     h2 {
-        font-size: 15.2vw;
+        font-size: 13.2vw;
         letter-spacing: -0.04em;
         margin-left: -2.5px;
     }
@@ -575,6 +575,7 @@ a:hover {
     position: fixed;
     top: 0;
     width: 97.4vw;
+    max-width: 3700px;
     /* height: 9.43vh; */
     box-sizing: border-box;
     padding: 1% 0 0 0;
@@ -667,7 +668,7 @@ a:hover {
     }
 }
 
-.first-screen-mob .first-screen__bg {
+.first-screen__bg {
     width: 100%;
 }
 
@@ -956,7 +957,7 @@ a:hover {
 
 .services_list {
     position: relative;
-    margin-top: 11vh;
+    margin-top: 9vh;
     z-index: 2;
 }
 
@@ -1302,7 +1303,7 @@ a:hover {
 @media (max-width: 1030px) {
     .cases_list-mob {
         display: block;
-        margin-top: 5.6vh;
+        margin-top: 8vh;
         margin-bottom: 8.2vh;
     }
 }
@@ -1342,7 +1343,7 @@ a:hover {
 }
 
 .cases_list-mob_item h3 {
-    width: 62vw;
+    width: 52vw;
     position: absolute;
     top: 1.9vh;
     left: 4.2vw;
@@ -1378,7 +1379,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     /* overflow: hidden; */
-    margin: 16vh 0 28vh 0;
+    margin: 14vh 0 24vh 0;
     box-sizing: border-box;
 }
 
@@ -1585,7 +1586,7 @@ div.reviews_slider_swiper {
 
 .contacts {
     width: 100%;
-    height: 126vh;
+    height: 100vh;
 }
 
 @media (max-width: 1030px) {
@@ -1595,13 +1596,13 @@ div.reviews_slider_swiper {
 }
 
 .contacts :is(.popup_menu__body_links) a {
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 100;
     padding-top: 0;
 }
 
 .contacts .popup_menu__body_links {
-    top: 29%;
+    top: 28%;
 }
 
 @media (max-width: 1030px) {
@@ -1616,7 +1617,7 @@ div.reviews_slider_swiper {
 
 @media (max-width: 1030px) {
     .contacts :is(.popup_menu__body_links) a {
-        font-size: 11vw;
+        font-size: 12vw;
     }
 }
 
@@ -1759,7 +1760,7 @@ div.reviews_slider_swiper {
 .stages_play {
     position: absolute;
     top: 38%;
-    left: 52%;
+    left: 53%;
     transform: translateX(-50%);
     z-index: 4;
     cursor: pointer;
@@ -1773,7 +1774,7 @@ div.reviews_slider_swiper {
 
 
 .stages_play img {
-    width: 12vw;
+    width: 16vw;
 }
 
 @media (max-width: 1030px) {
