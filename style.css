@@ -1073,10 +1073,14 @@ a:hover {
     gap: 0.6vw;
     position: absolute;
     right: 0;
-    top: 0;
-    padding-top: 16px;
+    top: 8px;
     opacity: 0;
     transition: opacity 0.5s ease;
+}
+
+.services_list__item:first-child
+.services_list__item__link {
+    top: 16px
 }
 
 .services_list__item__link .btn {
