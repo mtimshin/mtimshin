@@ -1000,6 +1000,7 @@ a:hover {
 }
 
 .services_list__item {
+    position: relative;
     margin-top: 0.3%;
 }
 
@@ -1062,6 +1063,41 @@ a:hover {
 @media (max-width: 1030px) {
     .services_list__item_cont {
         height: 20vh;
+    }
+}
+
+.services_list__item__link {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 0.6vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.services_list__item__link .btn {
+    width: 12%;
+    height: 2.2vw;
+    font-size: 0.68vw;
+    opacity: 0.5;
+    letter-spacing: 0;
+}
+
+.services_list__item__link .btn:hover {
+    opacity: 1;
+}
+
+.services_list__item:hover .services_list__item__link {
+    opacity: 1;
+}
+
+@media (max-width: 1030px) {
+    .services_list__item__link {
+        display: none;
     }
 }
 
