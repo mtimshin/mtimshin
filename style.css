@@ -1087,17 +1087,19 @@ a:hover {
     width: 12%;
     height: 2.2vw;
     font-size: 0.68vw;
-    opacity: 0.5;
     letter-spacing: 0;
+    border: 0.1em #474747 solid;
 }
 
 .services_list__item__link .btn:hover {
+    border: 0.1em white solid;
     opacity: 1;
 }
 
-.services_list__item:hover .services_list__item__link {
+.services_list__item__link:hover {
     opacity: 1;
 }
+
 
 @media (max-width: 1030px) {
     .services_list__item__link {
