@@ -999,6 +999,10 @@ a:hover {
     }
 }
 
+.price-page .services_list li p {
+    width: 100%;
+}
+
 .services_list__item {
     position: relative;
     margin-top: 0.3%;
@@ -1036,6 +1040,75 @@ a:hover {
     width: 50%;
 }
 
+@media (max-width: 1030px) {
+    .services_list__item_cont_desc .services_list__item_block{
+        width: 100%;
+    }
+}
+
+.cont_services_list__item_cont {
+    width: 50%;
+}
+
+.services_list__item_cont_desc {
+    display: flex;
+    width: 100%;
+    padding-bottom: 11vh;
+    border-bottom: 1px white solid;
+    margin-bottom: 1.1vh;
+}
+
+@media (max-width: 1030px) {
+    .services_list__item_cont_desc {
+        flex-wrap: wrap;
+        padding-bottom: 8vh;
+    }
+}
+
+@media (max-width: 1030px) {
+    .services_list__item_cont_desc p{
+        width: 100%;
+    }
+}
+
+.services_list__item_cont_desc:last-child {
+    border-bottom: none;
+    padding-bottom: 16vh;
+}
+
+@media (max-width: 1030px) {
+    .services_list__item_cont_desc:last-child{
+        padding-bottom: 7vh;
+    }
+}
+
+.price-page .services_list h3 {
+    padding-top: 0.2vh;
+}
+
+
+.services_list__item_block_price {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-weight: 900;
+    padding-top: 0.8vh;
+    font-size: 0.96vw;
+}
+
+@media (max-width: 1030px) {
+    .services_list__item_block_price {
+        font-size: 2.95vw;
+        text-align: left;
+        padding-top: 1.3vh;
+    }
+}
+
+.services_list__item_block p:nth-child(2) {
+    padding-top: 1.3vh;
+    opacity: 0.5;
+}
+
 .services_list__item_stripe {
     width: 0;
     height: 1px;
@@ -1064,6 +1137,10 @@ a:hover {
     .services_list__item_cont {
         height: 20vh;
     }
+}
+
+.price-page .services_list__item_cont {
+    height: auto;
 }
 
 .services_list__item__link {
