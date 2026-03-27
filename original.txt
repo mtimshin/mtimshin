@@ -1,0 +1,673 @@
+﻿<script setup>
+// Scripts and global styles are handled in nuxt.config.ts
+</script>
+
+<template>
+    <div>
+        <div class="preloader">
+            <img class="preloader__logo" src="/img/logo.svg" alt="╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜" />
+        </div>
+
+        <div class="cont-head" id="first">
+            <header class="header">
+                <a href="#first"><img src="/img/logo.svg" alt="╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜ тАФ ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ ╤Ж╨╕╤Д╤А╨╛╨▓╤Л╤Е ╨┐╤А╨╛╨┤╤Г╨║╤В╨╛╨▓" /></a>
+                <ul class="header_menu">
+                    <li>
+                        <a href="#services" class="link cont-head-anchor">╨г╤Б╨╗╤Г╨│╨╕</a>
+                    </li>
+                    <li>
+                        <a href="#cases" class="link cont-head-anchor">╨Ъ╨╡╨╣╤Б╤Л</a>
+                    </li>
+                    <li>
+                        <a href="#stages" class="link cont-head-anchor">╨н╤В╨░╨┐╤Л</a>
+                    </li>
+                    <li>
+                        <a href="#reviews" class="link cont-head-anchor">╨а╨╡╨║╨╛╨╝╨╡╨╜╨┤╨░╤Ж╨╕╨╕</a>
+                    </li>
+                    <li>
+                        <a href="/price" class="link">╨ж╨╡╨╜╤Л</a>
+                    </li>
+                </ul>
+                <a href="#contacts" class="btn">╨б╨▓╤П╨╖╨░╤В╤М╤Б╤П ╤Б╨╛ ╨╝╨╜╨╛╨╣</a>
+            </header>
+            <div class="cont-head-bg"></div>
+            <header class="header-mob">
+                <a href="#first">
+                    <img src="/img/logo.svg" alt="╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜ тАФ ╨Я╤А╨╛╨▓╨╛╨┤╨╜╨╕╨║ ╨▓ ╨╝╨╕╤А ╨╕╨╜╤В╨╡╤А╤Д╨╡╨╣╤Б╨╛╨▓" /></a>
+                <a onclick="openModal('case-modal_menu-drop')">
+                    <img src="/img/burger.svg" alt="╨Ь╨╡╨╜╤О" />
+                </a>
+            </header>
+        </div>
+
+        <div class="first-screen">
+            <h1>╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜</h1>
+            <img class="h1" src="/img/H1.svg" alt="╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜" />
+            <img class="first-screen__bg" src="/img/bg-first-screen.webp" alt="Maxim Timshin" />
+        </div>
+        <div class="first-screen-mob">
+            <h1>╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜</h1>
+            <img src="/img/h1-mob.svg" alt="╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜" class="h1-mob" />
+            <a href="#services"><img class="arrow-mob" src="/img/arrow-bottom-mob.svg" alt="╨г╤Б╨╗╤Г╨│╨╕" /></a>
+            <img class="first-screen__bg" src="/img/bg-first-screen-mob.png" alt="╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜" />
+        </div>
+
+        <div class="cont">
+            <div class="services" id="services">
+                <div class="services_heading">
+                    <h2>╨г╤Б╨╗╤Г╨│╨╕</h2>
+                    <p class="services_heading__p">╨С╨╛╨╗╨╡╨╡ 10 ╨╗╨╡╤В ╨╛╨┐╤Л╤В╨░</p>
+                </div>
+                <ul class="services_list">
+                    <li class="services_list__item">
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>╨Ф╨╕╨╖╨░╨╣╨╜ ╤Ж╨╕╤Д╤А╨╛╨▓╤Л╤Е ╨┐╤А╨╛╨┤╤Г╨║╤В╨╛╨▓</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    ╨Ю╤В ╨┐╤А╨╛╨╝╨╛ ╨╕ ╨║╨╛╤А╨┐╨╛╤А╨░╤В╨╕╨▓╨╜╤Л╤Е ╤Б╨░╨╣╤В╨╛╨▓ ╨┤╨╛ ╨▓╨╡╨▒-╤Б╨╡╤А╨▓╨╕╤Б╨╛╨▓,
+                                    ╨╕╨╜╤В╨╡╤А╨╜╨╡╤В-╨╝╨░╨│╨░╨╖╨╕╨╜╨╛╨▓ ╨╕ ╨╗╨╕╤З╨╜╤Л╤Е ╨║╨░╨▒╨╕╨╜╨╡╤В╨╛╨▓.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">╨б╨╝╨╛╤В╤А╨╡╤В╤М ╨║╨╡╨╣╤Б╤Л</a>
+                            <a href="/price" target="_blank" class="btn">╨ж╨╡╨╜╤Л</a>
+                        </div>
+                    </li>
+                    <li class="services_list__item">
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>╨Я╤А╨╛╨│╤А╨░╨╝╨╝╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    ╨б╤В╨░╤В╨╕╤З╨╡╤Б╨║╨╕╨╣ Front-End: HTML, CSS, JS.. ╨г╤Б╤В╨░╨╜╨╛╨▓╨║╨░ Wordpress
+                                    (PHP, MySQL)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">╨б╨╝╨╛╤В╤А╨╡╤В╤М ╨║╨╡╨╣╤Б╤Л</a>
+                            <a href="/price" target="_blank" class="btn">╨ж╨╡╨╜╤Л</a>
+                        </div>
+                    </li>
+                    <li class="services_list__item">
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>╨Р╨╣╨┤╨╡╨╜╤В╨╕╨║╨░</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    ╨Ы╨╛╨│╨╛ ╨╕╨╗╨╕ ╨┐╨╛╨╗╨╜╨░╤П ╨┐╤А╨╛╤А╨░╨▒╨╛╤В╨║╨░ ╨│╤А╨░╤Д╨╕╤З╨╡╤Б╨║╨╕╤Е ╤Д╨╛╤А╨╝ ╨╕ ╨┐╤А╨╕╨╜╤Ж╨╕╨┐╨╛╨▓
+                                    ╨┐╨╛╤Б╤В╤А╨╛╨╡╨╜╨╕╤П ╨▓╨╕╨╖╤Г╨░╨╗╤М╨╜╨╛╨╣ ╨║╨╛╨╝╨╝╤Г╨╜╨╕╨║╨░╤Ж╨╕╨╕, ╨╛╨▒╤К╨╡╨┤╨╕╨╜╤С╨╜╨╜╤Л╤Е ╨╛╨┤╨╜╨╛╨╣ ╨╕╨┤╨╡╨╡╨╣.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">╨б╨╝╨╛╤В╤А╨╡╤В╤М ╨║╨╡╨╣╤Б╤Л</a>
+                            <a href="/price" target="_blank" class="btn">╨ж╨╡╨╜╤Л</a>
+                        </div>
+                    </li>
+                    <li class="services_list__item">
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>╨Ь╨╡╨╜╨╡╨┤╨╢╨╝╨╡╨╜╤В</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    ╨Ф╨╗╤П ╨┐╤А╨╛╨╡╨║╤В╨╛╨▓, ╨│╨┤╨╡ ╨┐╤А╨╡╨┤╨┐╨╛╨╗╨░╨│╨░╤О╤В╤Б╤П ╨▒╨╛╨╗╤М╤И╨╕╨╡ ╨╛╨▒╤К╨╡╨╝╤Л ╤А╨░╨▒╨╛╤В, ╤Б╨╛╨▒╨╕╤А╨░╤О
+                                    ╨║╨╛╨╝╨░╨╜╨┤╤Г ╨┤╨╗╤П ╨▒╨╛╨╗╨╡╨╡ ╨▒╤Л╤Б╤В╤А╨╛╨│╨╛ ╤А╨╡╤И╨╡╨╜╨╕╤П ╨╖╨░╨┤╨░╤З.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">╨б╨╝╨╛╤В╤А╨╡╤В╤М ╨║╨╡╨╣╤Б╤Л</a>
+                            <a href="/price" target="_blank" class="btn">╨ж╨╡╨╜╤Л</a>
+                        </div>
+                    </li>
+                    <li class="services_list__item">
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>╨Р╤Г╨┤╨╕╤В, ╨║╨╛╨╜╤Б╤Г╨╗╤М╤В╨░╤Ж╨╕╨╕</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    ╨Р╤Г╨┤╨╕╤В ╤Б ╤А╨░╨╖╨▒╨╛╤А╨╛╨╝ ╨╛╤И╨╕╨▒╨╛╨║ ╨╛╤Д╨╛╤А╨╝╨╗╨╡╨╜╨╕╤П ╨╕ ╤А╨░╤Б╨┐╨╛╨╗╨╛╨╢╨╡╨╜╨╕╤П ╨║╨╛╨╜╤В╨╡╨╜╤В╨░,
+                                    ╨╜╨╡╤П╤Б╨╜╨╛╨╣ ╤В╨╕╨┐╨╛╨│╤А╨░╤Д╨╕╨║╨╕, ╤Б╨╝╤Л╤Б╨╗╨╛╨▓ ╨╕ ╨╗╨╛╨│╨╕╨║╨╕ ╨▒╨╕╨╖╨╜╨╡╤Б-╨┐╤А╨╛╤Ж╨╡╤Б╤Б╨╛╨▓.
+                                    ╨Ъ╨╛╨╜╤Б╤Г╨╗╤М╤В╨░╤Ж╨╕╤П ╨╝╨╡╨╜╨╡╨╡ ╨╛╨┐╤Л╤В╨╜╤Л╤Е ╤Б╨┐╨╡╤Ж╨╕╨░╨╗╨╕╤Б╤В╨╛╨▓.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">╨б╨╝╨╛╤В╤А╨╡╤В╤М ╨║╨╡╨╣╤Б╤Л</a>
+                            <a href="/price" target="_blank" class="btn">╨ж╨╡╨╜╤Л</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btns">
+                <a href="#stages" class="btn">╨н╤В╨░╨┐╤Л ╤А╨░╨▒╨╛╤В</a>
+                <a href="#contacts" class="btn2">╨б╨▓╤П╨╖╨░╤В╤М╤Б╤П ╤Б╨╛ ╨╝╨╜╨╛╨╣</a>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="stripe"></div>
+            <div class="cases" id="cases">
+                <h2>╨Ъ╨╡╨╣╤Б╤Л</h2>
+                <ul class="cases_list">
+                    <li>
+                        <div class="cases_list__item" role="button" onclick="openModal('case-modal-1')">
+                            <div class="cases_list__item_block1">
+                                <p><span>╨Ь╨░╤А╨║╨╡╤В╨┐╨╗╨╡╨╣╤Б ╨┤╨╗╤П ╨╛╤А╨│╨░╨╜╨╕╨╖╨░╤В╨╛╤А╨╛╨▓</span></p>
+                                <p><span>╨╝╨╡╤А╨╛╨┐╤А╨╕╤П╤В╨╕╨╣</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="/img/case1.png" alt="╨б╨║╤А╨╕╨╜1" />
+                                <img class="cases_list__item_img_2 lazyImg" data-src="/img/case1-hov.png"
+                                    alt="╨б╨║╤А╨╕╨╜2" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>╨Ы╨╛╨│╨╛ ╨┤╨╗╤П ╨н╨╗╨╡╨║╤В╤А╨╛╨╜╨┐╤А╨╕╨▒╨╛╤А</span></p>
+                                <p></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case2.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case2.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case2-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case2-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case3.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case3.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case3-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case3-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                            <div class="cases_list__item_block1">
+                                <p><span>╨а╨╡╨║╨╗╨░╨╝╨╜╨░╤П ╤Б╤В╤А╨░╨╜╨╕╤Ж╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░</span></p>
+                                <p><span>╨┐╨╡╤А╨╡╨▓╨╛╨┤╨╛╨▓ ╨║╤А╨╕╨┐╤В╤Л</span></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>╨Ш╨╜╤В╨╡╤А╨╜╨╡╤В-╨╝╨░╨│╨░╨╖╨╕╨╜</span></p>
+                                <p><span>╨╕╨╖╨╝╨╡╤А╨╕╤В╨╡╨╗╤М╨╜╨╛╨│╨╛ ╨╛╨▒╨╛╤А╤Г╨┤╨╛╨▓╨░╨╜╨╕╤П</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case4.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case4.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case4-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case4-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>╨а╨╡╨║╨╗╨░╨╝╨╜╨░╤П ╤Б╤В╤А╨░╨╜╨╕╤Ж╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░</span></p>
+                                <p><span>┬л╨в╤А╨╡╨▓╨╛╨╢╨╜╨░╤П ╨║╨╜╨╛╨┐╨║╨░┬╗</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case5.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case5.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case5-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case5-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>╨а╨╡╨║╨╗╨░╨╝╨╜╨░╤П ╤Б╤В╤А╨░╨╜╨╕╤Ж╨░ ╨╕ ╨╗╨╕╤З╨╜╤Л╨╣</span></p>
+                                <p><span>╨║╨░╨▒╨╕╨╜╨╡╤В AI-╤Б╨╡╤А╨▓╨╕╤Б╨░ </span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case6.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case6.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case6-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case6-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>╨Ы╨╛╨│╨╛ ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨░╨╣╨┤╨╡╤А╨░</span></p>
+                                <p><span>╨з╨╡╤Е╨╛╨▓-╤В╨╡╨╗╨╡╨║╨╛╨╝</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case7.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case7.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case7-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case7-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case8.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case8.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case8-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case8-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                            <div class="cases_list__item_block1">
+                                <p><span>╨Ы╨╛╨│╨╛ ╨┤╨╗╤П ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕, ╤В╨╛╤А╨│╤Г╤О╤Й╨╡╨╣ </span></p>
+                                <p><span>╨┤╨╡╤А╨╡╨▓╤П╨╜╨╜╤Л╨╝╨╕ ╨┐╨╛╨╗╨░╨╝╨╕</span></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>╨б╨╡╤А╨▓╨╕╤Б ╨┐╨╛ ╨┐╨╛╨╕╤Б╨║╤Г ╨╕ ╨┐╨╛╨┤╨▒╨╛╤А╤Г</span></p>
+                                <p><span>╨┐╤А╨╛╨▓╨░╨╣╨┤╨╡╤А╨╛╨▓</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case9.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case9.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case9-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case9-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>╨б╨░╨╣╤В ╨░╨║╨▓╨░╨┐╨░╤А╨║╨░</span></p>
+                                <p><span>┬л╨Р╨║╨▓╨░╨╗╤Н╨╜╨┤┬╗</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case10.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case10.png"
+                                        alt="╨б╨║╤А╨╕╨╜1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case10-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case10-hov.png"
+                                        alt="╨б╨║╤А╨╕╨╜2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="cases_list-mob">
+                    <li>
+                        <div class="cases_list-mob_item" role="button" onclick="openModal('case-modal-1')">
+                            <h3>╨Ь╨░╤А╨║╨╡╤В╨┐╨╗╨╡╨╣╤Б ╨┤╨╗╤П ╨╛╤А╨│╨░╨╜╨╕╨╖╨░╤В╨╛╤А╨╛╨▓ ╨╝╨╡╤А╨╛╨┐╤А╨╕╤П╤В╨╕╨╣</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case1-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case1-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨Ы╨╛╨│╨╛ ╨┤╨╗╤П ╨н╨╗╨╡╨║╤В╤А╨╛╨╜╨┐╤А╨╕╨▒╨╛╤А</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case2-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case2-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨а╨╡╨║╨╗╨░╨╝╨╜╨░╤П ╤Б╤В╤А╨░╨╜╨╕╤Ж╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░ ╨┐╨╡╤А╨╡╨▓╨╛╨┤╨╛╨▓ ╨║╤А╨╕╨┐╤В╤Л</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case3-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case3-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨Ш╨╜╤В╨╡╤А╨╜╨╡╤В-╨╝╨░╨│╨░╨╖╨╕╨╜ ╨╕╨╖╨╝╨╡╤А╨╕╤В╨╡╨╗╤М╨╜╨╛╨│╨╛ ╨╛╨▒╨╛╤А╤Г╨┤╨╛╨▓╨░╨╜╨╕╤П</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case4-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case4-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨а╨╡╨║╨╗╨░╨╝╨╜╨░╤П ╤Б╤В╤А╨░╨╜╨╕╤Ж╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░ ┬л╨в╤А╨╡╨▓╨╛╨╢╨╜╨░╤П ╨║╨╜╨╛╨┐╨║╨░┬╗</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case5-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case5-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨а╨╡╨║╨╗╨░╨╝╨╜╨░╤П ╤Б╤В╤А╨░╨╜╨╕╤Ж╨░ ╨╕ ╨╗╨╕╤З╨╜╤Л╨╣ ╨║╨░╨▒╨╕╨╜╨╡╤В AI-╤Б╨╡╤А╨▓╨╕╤Б╨░</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case6-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case6-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨Ы╨╛╨│╨╛ ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨░╨╣╨┤╨╡╤А╨░ ╨з╨╡╤Е╨╛╨▓-╤В╨╡╨╗╨╡╨║╨╛╨╝</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case7-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case7-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨Ы╨╛╨│╨╛ ╨┤╨╗╤П ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕, ╤В╨╛╤А╨│╤Г╤О╤Й╨╡╨╣ ╨┤╨╡╤А╨╡╨▓╤П╨╜╨╜╤Л╨╝╨╕ ╨┐╨╛╨╗╨░╨╝╨╕</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case8-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case8-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨б╨╡╤А╨▓╨╕╤Б ╨┐╨╛ ╨┐╨╛╨┤╨▒╨╛╤А╤Г ╨┐╤А╨╛╨▓╨░╨╣╨┤╨╡╤А╨╛╨▓</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case9-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case9-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>╨б╨░╨╣╤В ╨░╨║╨▓╨░╨┐╨░╤А╨║╨░ ┬л╨Р╨║╨▓╨░╨╗╤Н╨╜╨┤┬╗</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case10-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case10-mob.png" alt="╤Б╨║╤А╨╕╨╜" />
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+                <div class="case-modal modal" id="case-modal-1" data-lenis-prevent data-scroll-lock-scrollable>
+                    <div class="case-modal__header">
+                        <div role="button" class="case-modal__closer modal__closer">
+                            <img src="/img/close.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="case-modal__wrapper">
+                        <div class="case-modal__body">
+                            <img class="lazyImg" data-src="/img/cases/test.webp" alt="" />
+                            <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
+                                    data-src="https://kinescope.io/embed/tcsbNetr3CHLH927njhkbo"
+                                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                                    frameborder="0" allowfullscreen
+                                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+                            </div>
+                            <img class="lazyImg" data-src="/img/cases/test2.webp" alt="" />
+                            <img class="lazyImg" data-src="/img/cases/test3.webp" alt="" />
+                            <img class="lazyImg" data-src="/img/cases/test4.webp" alt="" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="stripe"></div>
+            <div class="stages" id="stages">
+                <h2>╨н╤В╨░╨┐╤Л</h2>
+                <a class="stages_play" role="button" onclick="openModal('case-modal-video')">
+                    <img src="/img/play_stages.svg" alt="play" />
+                </a>
+                <video autoplay muted loop data-src="/bg-video.mp4" class="stages_video lazyImg"></video>
+                <img src="/img/bg-stages.svg" alt="╤В╨╛╨╜╨╕╤А╨╛╨▓╨║╨░" class="stages_bg-ton1" />
+                <div class="stages_bg-ton2"></div>
+                <div class="case-modal modal" id="case-modal-video" data-lenis-prevent data-scroll-lock-scrollable>
+                    <div class="case-modal__header">
+                        <div role="button" class="case-modal__closer modal__closer">
+                            <img src="/img/close.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="case-modal__wrapper">
+                        <div class="case-modal__body">
+                            <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
+                                    data-src="https://kinescope.io/embed/p2VvrZj8NA4W3fyDjZPuU9?autoplay=1"
+                                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                                    frameborder="0" allowfullscreen
+                                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="stripe"></div>
+            <div class="reviews" id="reviews">
+                <h2 class="reviews_h2">╨а╨╡╨║╨╛╨╝╨╡╨╜╨┤╨░╤Ж╨╕╨╕</h2>
+                <h2 class="reviews_h2-mob">╨Ю╤В╨╖╤Л╨▓╤Л</h2>
+                <div class="reviews_slider">
+                    <button class="reviews_slider_prev"></button>
+                    <div class="swiper reviews_slider_swiper">
+                        <div class="reviews_slider_list swiper-wrapper">
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>╨Т╨░╨┤╨╕╨╝ ╨Р╨╜╤В╨╛╨╜╨╡╨▓╨╕╤З 1</h3>
+                                        <p>╤А╤Г╨║╨╛╨▓╨╛╨┤╨╕╤В╨╡╨╗╤М ╨╛╤В╨┤╨╡╨╗╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░ ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ ┬лRVS┬╗</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="╨╛╤В╨╖╤Л╨▓" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>╨Т╨░╨┤╨╕╨╝ ╨Р╨╜╤В╨╛╨╜╨╡╨▓╨╕╤З 2</h3>
+                                        <p>╤А╤Г╨║╨╛╨▓╨╛╨┤╨╕╤В╨╡╨╗╤М ╨╛╤В╨┤╨╡╨╗╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░ ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ ┬лRVS┬╗</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="╨╛╤В╨╖╤Л╨▓" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>╨Т╨░╨┤╨╕╨╝ ╨Р╨╜╤В╨╛╨╜╨╡╨▓╨╕╤З</h3>
+                                        <p>╤А╤Г╨║╨╛╨▓╨╛╨┤╨╕╤В╨╡╨╗╤М ╨╛╤В╨┤╨╡╨╗╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░ ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ ┬лRVS┬╗</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="╨╛╤В╨╖╤Л╨▓" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>╨Т╨░╨┤╨╕╨╝ ╨Р╨╜╤В╨╛╨╜╨╡╨▓╨╕╤З</h3>
+                                        <p>╤А╤Г╨║╨╛╨▓╨╛╨┤╨╕╤В╨╡╨╗╤М ╨╛╤В╨┤╨╡╨╗╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░ ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ ┬лRVS┬╗</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="╨╛╤В╨╖╤Л╨▓" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>╨Т╨░╨┤╨╕╨╝ ╨Р╨╜╤В╨╛╨╜╨╡╨▓╨╕╤З</h3>
+                                        <p>╤А╤Г╨║╨╛╨▓╨╛╨┤╨╕╤В╨╡╨╗╤М ╨╛╤В╨┤╨╡╨╗╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░ ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ ┬лRVS┬╗</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="╨╛╤В╨╖╤Л╨▓" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>╨Т╨░╨┤╨╕╨╝ ╨Р╨╜╤В╨╛╨╜╨╡╨▓╨╕╤З</h3>
+                                        <p>╤А╤Г╨║╨╛╨▓╨╛╨┤╨╕╤В╨╡╨╗╤М ╨╛╤В╨┤╨╡╨╗╨░ ╤Б╨╡╤А╨▓╨╕╤Б╨░ ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ ┬лRVS┬╗</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="╨╛╤В╨╖╤Л╨▓" />
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="reviews_slider_next"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="stripe"></div>
+            <div class="contacts" id="contacts">
+                <h2>╨Ъ╨╛╨╜╤В╨░╨║╤В╤Л</h2>
+                <div class="popup_menu__body_links">
+                    <div class="popup_menu__body_links_1">
+                        <a href="https://dprofile.ru/mtimshin" target="_blank">Dprofile</a>
+                        <a href="https://www.behance.net/mtimshin" target="_blank">Behance</a>
+                    </div>
+                    <div class="popup_menu__body_links_2">
+                        <a href="https://t.me/mtimshin" target="_blank">Telegram</a>
+                        <a href="https://vk.com/m_timshin" target="_blank">VK</a>
+                    </div>
+                </div>
+                <footer class="contacts_bottom">
+                    <div class="contacts_bottom_block1">
+                        <div class="contacts_bottom_block1-1">
+                            <a href="#" target="_blank">
+                                <h3>Instagram</h3>
+                            </a>
+                        </div>
+                        <div class="contacts_bottom_block1-2">
+                            <a href="#" target="_blank">
+                                <h3>Youtube</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contacts_bottom_block2">
+                        <a href="mailto:max@mtimshin.ru">
+                            <h3>max@mtimshin.ru</h3>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="case-modal modal" id="case-modal_menu-drop" data-lenis-prevent data-scroll-lock-scrollable>
+            <div class="header-mob" style="position: relative; z-index: 20; background-color: #0A0A0A;">
+                <img src="/img/logo.svg" alt="╨Ь╨░╨║╤Б╨╕╨╝ ╨в╨╕╨╝╤И╨╕╨╜ тАФ ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ ╤Ж╨╕╤Д╤А╨╛╨▓╤Л╤Е ╨┐╤А╨╛╨┤╤Г╨║╤В╨╛╨▓" />
+                <a class="case-modal__closer" style="cursor: pointer" onclick="window.closeAnyModal()">
+                    <img src="/img/close.svg" alt="╨Ч╨░╨║╤А╤Л╤В╤М ╨╝╨╡╨╜╤О" />
+                </a>
+            </div>
+            <div class="popup_menu__body_links">
+                <div class="popup_menu__body_links_1">
+                    <a href="#cases">╨Ъ╨╡╨╣╤Б╤Л</a>
+                    <a href="#services">╨г╤Б╨╗╤Г╨│╨╕</a>
+                </div>
+                <div class="popup_menu__body_links_2">
+                    <a href="#reviews">╨Ю╤В╨╖╤Л╨▓╤Л</a>
+                    <a href="/price">╨ж╨╡╨╜╤Л</a>
+                </div>
+            </div>
+            <div class="popup_menu__body_btn">
+                <a href="#contacts" class="btn">╨б╨▓╤П╨╖╨░╤В╤М╤Б╤П ╤Б╨╛ ╨╝╨╜╨╛╨╣</a>
+                <a href="#stages" class="btn">╨н╤В╨░╨┐╤Л ╤А╨░╨▒╨╛╤В</a>
+            </div>
+        </div>
+    </div>
+</template>

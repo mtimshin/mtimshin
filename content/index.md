@@ -49,6 +49,7 @@ cases:
     mobImg: /img/case2-mob.png
     mobWebp: /img/case2-mob.webp
   - url: "#"
+    reverse: true
     titleLines: ['Рекламная страница сервиса', 'переводов крипты']
     img1: /img/case3.png
     webp1: /img/case3.webp
@@ -104,6 +105,7 @@ cases:
     mobImg: /img/case7-mob.png
     mobWebp: /img/case7-mob.webp
   - url: "#"
+    reverse: true
     titleLines: ['Лого для компании, торгующей', 'деревянными полами']
     img1: /img/case8.png
     webp1: /img/case8.webp

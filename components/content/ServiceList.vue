@@ -36,7 +36,7 @@ defineProps({
           <div class="services_list__item_stripe"></div>
           <div class="services_list__item__link">
             <a :href="item.link1Url || '#cases'" class="btn">{{ item.link1Text || 'Смотреть кейсы' }}</a>
-            <a :href="item.link2Url || '/price'" target="_blank" class="btn">{{ item.link2Text || 'Цены' }}</a>
+            <a :href="item.link2Url || '/price'" class="btn">{{ item.link2Text || 'Цены' }}</a>
           </div>
         </li>
       </ul>

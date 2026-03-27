@@ -34,7 +34,7 @@ const openModal = (id) => {
             </div>
           </div>
           <a v-else :href="item.url || '#'" class="cases_list__item">
-            <div v-if="item.titleLines && index < 2" class="cases_list__item_block1">
+            <div v-if="!item.reverse" class="cases_list__item_block1">
               <p v-for="(line, lIndex) in item.titleLines" :key="lIndex"><span>{{ line }}</span></p>
             </div>
             <div class="cases_list__item_img1">
@@ -50,7 +50,7 @@ const openModal = (id) => {
               </picture>
               <img v-else class="cases_list__item_img_2 lazyImg" :data-src="item.img2" :alt="item.alt2" />
             </div>
-            <div v-if="item.titleLines && index >= 2" class="cases_list__item_block1">
+            <div v-if="item.reverse" class="cases_list__item_block1">
               <p v-for="(line, lIndex) in item.titleLines" :key="lIndex"><span>{{ line }}</span></p>
             </div>
           </a>
