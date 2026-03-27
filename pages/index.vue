@@ -1,0 +1,673 @@
+<script setup>
+// Scripts and global styles are handled in nuxt.config.ts
+</script>
+
+<template>
+    <div>
+        <div class="preloader">
+            <img class="preloader__logo" src="/img/logo.svg" alt="Максим Тимшин" />
+        </div>
+
+        <div class="cont-head" id="first">
+            <header class="header">
+                <a href="#first"><img src="/img/logo.svg" alt="Максим Тимшин — Создание цифровых продуктов" /></a>
+                <ul class="header_menu">
+                    <li>
+                        <a href="#services" class="link cont-head-anchor">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="#cases" class="link cont-head-anchor">Кейсы</a>
+                    </li>
+                    <li>
+                        <a href="#stages" class="link cont-head-anchor">Этапы</a>
+                    </li>
+                    <li>
+                        <a href="#reviews" class="link cont-head-anchor">Рекомендации</a>
+                    </li>
+                    <li>
+                        <a href="/price" class="link">Цены</a>
+                    </li>
+                </ul>
+                <a href="#contacts" class="btn">Связаться со мной</a>
+            </header>
+            <div class="cont-head-bg"></div>
+            <header class="header-mob">
+                <a href="#first">
+                    <img src="/img/logo.svg" alt="Максим Тимшин — Проводник в мир интерфейсов" /></a>
+                <a onclick="openModal('case-modal_menu-drop')">
+                    <img src="/img/burger.svg" alt="Меню" />
+                </a>
+            </header>
+        </div>
+
+        <div class="first-screen">
+            <h1>Максим Тимшин</h1>
+            <img class="h1" src="/img/H1.svg" alt="Максим Тимшин" />
+            <img class="first-screen__bg" src="/img/bg-first-screen.webp" alt="Maxim Timshin" />
+        </div>
+        <div class="first-screen-mob">
+            <h1>Максим Тимшин</h1>
+            <img src="/img/h1-mob.svg" alt="Максим Тимшин" class="h1-mob" />
+            <a href="#services"><img class="arrow-mob" src="/img/arrow-bottom-mob.svg" alt="Услуги" /></a>
+            <img class="first-screen__bg" src="/img/bg-first-screen-mob.png" alt="Максим Тимшин" />
+        </div>
+
+        <div class="cont">
+            <div class="services" id="services">
+                <div class="services_heading">
+                    <h2>Услуги</h2>
+                    <p class="services_heading__p">Более 10 лет опыта</p>
+                </div>
+                <ul class="services_list">
+                    <li class="services_list__item">
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>Дизайн цифровых продуктов</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    От промо и корпоративных сайтов до веб-сервисов,
+                                    интернет-магазинов и личных кабинетов.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">Смотреть кейсы</a>
+                            <a href="/price" target="_blank" class="btn">Цены</a>
+                        </div>
+                    </li>
+                    <li class="services_list__item">
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>Программирование</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    Статический Front-End: HTML, CSS, JS.. Установка Wordpress
+                                    (PHP, MySQL)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">Смотреть кейсы</a>
+                            <a href="/price" target="_blank" class="btn">Цены</a>
+                        </div>
+                    </li>
+                    <li class="services_list__item">
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>Айдентика</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    Лого или полная проработка графических форм и принципов
+                                    построения визуальной коммуникации, объединённых одной идеей.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">Смотреть кейсы</a>
+                            <a href="/price" target="_blank" class="btn">Цены</a>
+                        </div>
+                    </li>
+                    <li class="services_list__item">
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>Менеджмент</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    Для проектов, где предполагаются большие объемы работ, собираю
+                                    команду для более быстрого решения задач.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">Смотреть кейсы</a>
+                            <a href="/price" target="_blank" class="btn">Цены</a>
+                        </div>
+                    </li>
+                    <li class="services_list__item">
+                        <div class="services_list__item_cont">
+                            <div class="services_list__item_block">
+                                <h3>Аудит, консультации</h3>
+                            </div>
+                            <div class="services_list__item_block">
+                                <p>
+                                    Аудит с разбором ошибок оформления и расположения контента,
+                                    неясной типографики, смыслов и логики бизнес-процессов.
+                                    Консультация менее опытных специалистов.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services_list__item_stripe"></div>
+                        <div class="services_list__item__link">
+                            <a href="#cases" class="btn">Смотреть кейсы</a>
+                            <a href="/price" target="_blank" class="btn">Цены</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btns">
+                <a href="#stages" class="btn">Этапы работ</a>
+                <a href="#contacts" class="btn2">Связаться со мной</a>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="stripe"></div>
+            <div class="cases" id="cases">
+                <h2>Кейсы</h2>
+                <ul class="cases_list">
+                    <li>
+                        <div class="cases_list__item" role="button" onclick="openModal('case-modal-1')">
+                            <div class="cases_list__item_block1">
+                                <p><span>Маркетплейс для организаторов</span></p>
+                                <p><span>мероприятий</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <img class="cases_list__item_img_1 lazyImg" data-src="/img/case1.png" alt="Скрин1" />
+                                <img class="cases_list__item_img_2 lazyImg" data-src="/img/case1-hov.png"
+                                    alt="Скрин2" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>Лого для Электронприбор</span></p>
+                                <p></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case2.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case2.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case2-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case2-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case3.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case3.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case3-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case3-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                            <div class="cases_list__item_block1">
+                                <p><span>Рекламная страница сервиса</span></p>
+                                <p><span>переводов крипты</span></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>Интернет-магазин</span></p>
+                                <p><span>измерительного оборудования</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case4.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case4.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case4-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case4-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>Рекламная страница сервиса</span></p>
+                                <p><span>«Тревожная кнопка»</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case5.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case5.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case5-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case5-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>Рекламная страница и личный</span></p>
+                                <p><span>кабинет AI-сервиса </span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case6.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case6.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case6-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case6-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>Лого для провайдера</span></p>
+                                <p><span>Чехов-телеком</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case7.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case7.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case7-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case7-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case8.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case8.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case8-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case8-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                            <div class="cases_list__item_block1">
+                                <p><span>Лого для компании, торгующей </span></p>
+                                <p><span>деревянными полами</span></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>Сервис по поиску и подбору</span></p>
+                                <p><span>провайдеров</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case9.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case9.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case9-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case9-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cases_list__item">
+                            <div class="cases_list__item_block1">
+                                <p><span>Сайт аквапарка</span></p>
+                                <p><span>«Аквалэнд»</span></p>
+                            </div>
+                            <div class="cases_list__item_img1">
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case10.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_1 lazyImg" data-src="/img/case10.png"
+                                        alt="Скрин1" />
+                                </picture>
+                                <picture>
+                                    <source class="lazyImg" data-src="/img/case10-hov.webp" type="image/webp" />
+                                    <img class="cases_list__item_img_2 lazyImg" data-src="/img/case10-hov.png"
+                                        alt="Скрин2" />
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="cases_list-mob">
+                    <li>
+                        <div class="cases_list-mob_item" role="button" onclick="openModal('case-modal-1')">
+                            <h3>Маркетплейс для организаторов мероприятий</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case1-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case1-mob.png" alt="скрин" />
+                            </picture>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Лого для Электронприбор</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case2-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case2-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Рекламная страница сервиса переводов крипты</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case3-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case3-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Интернет-магазин измерительного оборудования</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case4-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case4-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Рекламная страница сервиса «Тревожная кнопка»</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case5-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case5-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Рекламная страница и личный кабинет AI-сервиса</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case6-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case6-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Лого для провайдера Чехов-телеком</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case7-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case7-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Лого для компании, торгующей деревянными полами</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case8-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case8-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Сервис по подбору провайдеров</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case9-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case9-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cases_list-mob_item" href="#">
+                            <h3>Сайт аквапарка «Аквалэнд»</h3>
+                            <picture>
+                                <source class="lazyImg" data-src="/img/case10-mob.webp" type="image/webp" />
+                                <img class="lazyImg" data-src="/img/case10-mob.png" alt="скрин" />
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+                <div class="case-modal modal" id="case-modal-1" data-lenis-prevent data-scroll-lock-scrollable>
+                    <div class="case-modal__header">
+                        <div role="button" class="case-modal__closer modal__closer">
+                            <img src="/img/close.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="case-modal__wrapper">
+                        <div class="case-modal__body">
+                            <img class="lazyImg" data-src="/img/cases/test.webp" alt="" />
+                            <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
+                                    data-src="https://kinescope.io/embed/tcsbNetr3CHLH927njhkbo"
+                                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                                    frameborder="0" allowfullscreen
+                                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+                            </div>
+                            <img class="lazyImg" data-src="/img/cases/test2.webp" alt="" />
+                            <img class="lazyImg" data-src="/img/cases/test3.webp" alt="" />
+                            <img class="lazyImg" data-src="/img/cases/test4.webp" alt="" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="stripe"></div>
+            <div class="stages" id="stages">
+                <h2>Этапы</h2>
+                <a class="stages_play" role="button" onclick="openModal('case-modal-video')">
+                    <img src="/img/play_stages.svg" alt="play" />
+                </a>
+                <video autoplay muted loop data-src="/bg-video.mp4" class="stages_video lazyImg"></video>
+                <img src="/img/bg-stages.svg" alt="тонировка" class="stages_bg-ton1" />
+                <div class="stages_bg-ton2"></div>
+                <div class="case-modal modal" id="case-modal-video" data-lenis-prevent data-scroll-lock-scrollable>
+                    <div class="case-modal__header">
+                        <div role="button" class="case-modal__closer modal__closer">
+                            <img src="/img/close.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="case-modal__wrapper">
+                        <div class="case-modal__body">
+                            <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
+                                    data-src="https://kinescope.io/embed/p2VvrZj8NA4W3fyDjZPuU9?autoplay=1"
+                                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                                    frameborder="0" allowfullscreen
+                                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="stripe"></div>
+            <div class="reviews" id="reviews">
+                <h2 class="reviews_h2">Рекомендации</h2>
+                <h2 class="reviews_h2-mob">Отзывы</h2>
+                <div class="reviews_slider">
+                    <button class="reviews_slider_prev"></button>
+                    <div class="swiper reviews_slider_swiper">
+                        <div class="reviews_slider_list swiper-wrapper">
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>Вадим Антоневич 1</h3>
+                                        <p>руководитель отдела сервиса компании «RVS»</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="отзыв" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>Вадим Антоневич 2</h3>
+                                        <p>руководитель отдела сервиса компании «RVS»</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="отзыв" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>Вадим Антоневич</h3>
+                                        <p>руководитель отдела сервиса компании «RVS»</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="отзыв" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>Вадим Антоневич</h3>
+                                        <p>руководитель отдела сервиса компании «RVS»</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="отзыв" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>Вадим Антоневич</h3>
+                                        <p>руководитель отдела сервиса компании «RVS»</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="отзыв" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="reviews_slider_slide swiper-slide">
+                                <a href="#">
+                                    <img src="/img/play.svg" alt="play" class="reviews_slider_slide_play" />
+                                    <div class="reviews_slider_slide_text">
+                                        <h3>Вадим Антоневич</h3>
+                                        <p>руководитель отдела сервиса компании «RVS»</p>
+                                    </div>
+                                    <div class="reviews_slider_slide_bg2"></div>
+                                    <picture>
+                                        <source class="lazyImg" data-src="/img/review1.webp" type="image/webp" />
+                                        <img class="reviews_slider_slide_bg1 lazyImg" data-src="/img/review1.png"
+                                            alt="отзыв" />
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="reviews_slider_next"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="stripe"></div>
+            <div class="contacts" id="contacts">
+                <h2>Контакты</h2>
+                <div class="popup_menu__body_links">
+                    <div class="popup_menu__body_links_1">
+                        <a href="https://dprofile.ru/mtimshin" target="_blank">Dprofile</a>
+                        <a href="https://www.behance.net/mtimshin" target="_blank">Behance</a>
+                    </div>
+                    <div class="popup_menu__body_links_2">
+                        <a href="https://t.me/mtimshin" target="_blank">Telegram</a>
+                        <a href="https://vk.com/m_timshin" target="_blank">VK</a>
+                    </div>
+                </div>
+                <footer class="contacts_bottom">
+                    <div class="contacts_bottom_block1">
+                        <div class="contacts_bottom_block1-1">
+                            <a href="#" target="_blank">
+                                <h3>Instagram</h3>
+                            </a>
+                        </div>
+                        <div class="contacts_bottom_block1-2">
+                            <a href="#" target="_blank">
+                                <h3>Youtube</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contacts_bottom_block2">
+                        <a href="mailto:max@mtimshin.ru">
+                            <h3>max@mtimshin.ru</h3>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="case-modal modal" id="case-modal_menu-drop" data-lenis-prevent data-scroll-lock-scrollable>
+            <div class="header-mob" style="position: relative; z-index: 20; background-color: #0A0A0A;">
+                <img src="/img/logo.svg" alt="Максим Тимшин — Создание цифровых продуктов" />
+                <a class="case-modal__closer" style="cursor: pointer" onclick="window.closeAnyModal()">
+                    <img src="/img/close.svg" alt="Закрыть меню" />
+                </a>
+            </div>
+            <div class="popup_menu__body_links">
+                <div class="popup_menu__body_links_1">
+                    <a href="#cases">Кейсы</a>
+                    <a href="#services">Услуги</a>
+                </div>
+                <div class="popup_menu__body_links_2">
+                    <a href="#reviews">Отзывы</a>
+                    <a href="/price">Цены</a>
+                </div>
+            </div>
+            <div class="popup_menu__body_btn">
+                <a href="#contacts" class="btn">Связаться со мной</a>
+                <a href="#stages" class="btn">Этапы работ</a>
+            </div>
+        </div>
+    </div>
+</template>

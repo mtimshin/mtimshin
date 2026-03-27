@@ -69,11 +69,20 @@ window.scrollLock.setFillGapMethod('none') // Changes the method of filling the 
     /* Якоря */
     ; (function () {
         const anchors = Array.from(document.querySelectorAll('.cont-head-anchor')).map((item) => {
-            return {
-                link: item,
-                section: document.querySelector(item.getAttribute('href'))
+            let href = item.getAttribute('href');
+            let selector = href;
+            if (href && href.startsWith('/#')) {
+                selector = href.substring(1); // убираем слэш, чтобы селектор был валидным (например, '#cases')
             }
-        }).reverse()
+            try {
+                return {
+                    link: item,
+                    section: document.querySelector(selector)
+                }
+            } catch (e) {
+                return { link: item, section: null }
+            }
+        }).filter(item => item.section).reverse()
 
         function updateActiveLink() {
             let isFound = false
@@ -182,11 +191,14 @@ function openModal(modalId) {
     function modalClickHandler(e) {
         if (!e.target.closest('.case-modal__body')) {
             modal.removeEventListener('click', modalClickHandler)
-            closeModal()
+            window.closeAnyModal()
         }
     }
+}
 
-    function closeModal() {
+window.closeAnyModal = function () {
+    const modal = document.querySelector('.case-modal.visible')
+    if (modal) {
         modal.classList.remove('visible')
         setTimeout(() => {
             stopKinescopeVideos(modal)

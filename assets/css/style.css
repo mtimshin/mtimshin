@@ -195,32 +195,32 @@ input:-ms-input-placeholder {
 
 @font-face {
     font-family: "Manrope";
-    src: url("fonts/Manrope-ExtraBold.woff") format("woff"),
-        url("fonts/Manrope-ExtraBold.ttf") format("truetype");
+    src: url("/fonts/Manrope-ExtraBold.woff") format("woff"),
+        url("/fonts/Manrope-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: extrabold;
 }
 
 @font-face {
     font-family: "Manrope";
-    src: url("fonts/Manrope-Bold.woff") format("woff"),
-        url("fonts/Manrope-Bold.ttf") format("truetype");
+    src: url("/fonts/Manrope-Bold.woff") format("woff"),
+        url("/fonts/Manrope-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: bold;
 }
 
 @font-face {
     font-family: "Manrope";
-    src: url("fonts/Manrope-SemiBold.woff") format("woff"),
-        url("fonts/Manrope-SemiBold.ttf") format("truetype");
+    src: url("/fonts/Manrope-SemiBold.woff") format("woff"),
+        url("/fonts/Manrope-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: semibold;
 }
 
 @font-face {
     font-family: "Manrope";
-    src: url("fonts/Manrope-Medium.woff") format("woff"),
-        url("fonts/Manrope-Medium.ttf") format("truetype");
+    src: url("/fonts/Manrope-Medium.woff") format("woff"),
+        url("/fonts/Manrope-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: medium;
 }
@@ -228,23 +228,23 @@ input:-ms-input-placeholder {
 @font-face {
     font-family: "Manrope";
     src: url("/fonts/Manrope-Regular.woff") format("woff"),
-        url("fonts/Manrope-Regular.ttf") format("truetype");
+        url("/fonts/Manrope-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Manrope";
-    src: url("fonts/Manrope-Light.woff") format("woff"),
-        url("fonts/Manrope-Light.ttf") format("truetype");
+    src: url("/fonts/Manrope-Light.woff") format("woff"),
+        url("/fonts/Manrope-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: light;
 }
 
 @font-face {
     font-family: "Manrope";
-    src: url("fonts/Manrope-ExtraLight.woff") format("woff"),
-        url("fonts/Manrope-ExtraLight.ttf") format("truetype");
+    src: url("/fonts/Manrope-ExtraLight.woff") format("woff"),
+        url("/fonts/Manrope-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: extralight;
 }
@@ -385,7 +385,7 @@ body {
     width: 100%;
     height: 14vh;
     z-index: 10;
-    background: linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0)); 
+    background: linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0));
 }
 
 @media (max-width: 1030px) {
@@ -397,7 +397,7 @@ body {
 a {
     text-decoration: none;
     color: white;
-    font-size: 0.94vw;
+    font-size: 0.82vw;
     font-weight: 400;
     letter-spacing: -0.002em;
     line-height: 114%;
@@ -420,14 +420,15 @@ a {
 p {
     text-decoration: none;
     color: white;
-    font-size: 0.96vw;
+    font-size: 0.82vw;
     font-weight: 200;
     line-height: 130%;
+    letter-spacing: 0.016em;
 }
 
 @media (max-width: 1270px) {
     p {
-        font-size: 1vw;
+        font-size: 0.9vw;
         letter-spacing: 0;
     }
 }
@@ -443,14 +444,14 @@ p {
 h3 {
     text-decoration: none;
     color: white;
-    font-size: 1.3vw;
+    font-size: 1.15vw;
     font-weight: 400;
     letter-spacing: -0.01em;
 }
 
 @media (max-width: 1030px) {
     h3 {
-        font-size: 3.5vw;
+        font-size: 3.7vw;
         font-weight: 400;
         letter-spacing: -0.005em;
     }
@@ -459,7 +460,7 @@ h3 {
 h2 {
     text-decoration: none;
     color: white;
-    font-size: 5vw;
+    font-size: 4.6vw;
     font-weight: 200;
     letter-spacing: -0.036em;
     margin-left: -4px;
@@ -468,7 +469,7 @@ h2 {
 
 @media (max-width: 1030px) {
     h2 {
-        font-size: 13.2vw;
+        font-size: 13.3vw;
         letter-spacing: -0.04em;
         margin-left: -2.5px;
     }
@@ -476,6 +477,9 @@ h2 {
 
 h1 {
     font-size: 0.001px;
+    position: absolute;
+    top: -100px;
+    left: -100px;
 }
 
 a {
@@ -600,21 +604,22 @@ a:hover {
 .header_menu {
     width: auto;
     display: flex;
-    gap: 2vw;
-    padding-right: 5vw;
+    gap: 1.5vw;
+    padding-right: 1.4vw;
 }
 
 .price-page .header_menu {
     padding-right: 0;
+    margin-right: -6vw;
 }
 
 
-.header_menu li:nth-child(5) .link {
+/* .header_menu li:nth-child(5) .link {
     padding-right: 0.9vw;
     position: relative;
-}
+} */
 
-.header_menu li:nth-child(5) .link:before {
+/* .header_menu li:nth-child(5) .link:before {
     content: '';
     position: absolute;
     top: 30%;
@@ -622,18 +627,16 @@ a:hover {
     transform: translateY(-50%);
     width: 0.64vw;
     height: 0.64vw;
-    background: url('img/target.svg') no-repeat center;
+    background: url('/img/target.svg') no-repeat center;
     background-size: cover;
     opacity: 0;
-    /* Скрываем пиктограмму по умолчанию */
     transition: opacity 0.3s ease-in-out;
-    /* Анимация прозрачности */
 }
 
 .header_menu li:nth-child(5) .link:hover:before {
     opacity: 1;
-    /* Делаем пиктограмму видимой при наведении */
-}
+
+} */
 
 
 
@@ -739,7 +742,7 @@ a:hover {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.94);
+    background-color: #0A0A0A;
     top: 0;
     left: 0;
     opacity: 0;
@@ -776,7 +779,7 @@ a:hover {
 .popup_close {
     display: block;
     width: 3.63vw;
-    background: url(img/close.svg) no-repeat center / cover;
+    background: url(/img/close.svg) no-repeat center / cover;
     position: absolute;
     top: 16px;
     right: 16px;
@@ -857,9 +860,13 @@ a:hover {
     width: 100vw;
     overflow: auto;
 
-    background-color: rgba(0, 0, 0, 0.94);
+    background-color: #0A0A0A;
 
     transition: opacity 0.5s ease;
+}
+
+body:has(.modal.visible) .header-mob:not(.modal .header-mob) {
+    display: none !important;
 }
 
 .modal:not(.displayed) {
@@ -876,16 +883,31 @@ a:hover {
     top: 0;
     display: flex;
     justify-content: flex-end;
-    padding: 40px;
+    padding: 28px;
     z-index: 100;
+}
+
+@media (max-width: 1030px) {
+    .case-modal__header {
+        padding: 4%;
+    }
 }
 
 .case-modal__closer {
     display: flex;
-
-    width: 40px;
-
+    width: 3.8vw;
     cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+@media (max-width: 1030px) {
+    .case-modal__closer {
+        width: 11.2vw;
+    }
+}
+
+.case-modal__closer:hover {
+    opacity: 0.5;
 }
 
 
@@ -894,19 +916,53 @@ a:hover {
 }
 
 .case-modal__wrapper {
-    max-width: 1900px;
+    max-width: 3200px;
     margin: 0 auto;
-    padding: 0 6% 100px;
+    padding: 0 8% 10vh;
+}
+
+@media (max-width: 1030px) {
+    .case-modal__wrapper {
+        padding: 0 3% 120px;
+    }
+}
+
+.stages .case-modal__wrapper {
+    max-width: 76%;
 }
 
 .case-modal__body {
     display: grid;
 }
 
+@media (max-width: 1030px) {
+    .case-modal__body {
+        height: 70vh;
+    }
+}
+
 .case-modal__body img {
     width: 100%;
     object-fit: cover;
 }
+
+.case-modal__body_otz {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 50%;
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1030px) {
+    .case-modal__body_otz {
+        width: 80%;
+    }
+}
+
+
 /* end Модалка кейсов */
 
 /* SERVICES */
@@ -933,16 +989,6 @@ a:hover {
 }
 
 
-
-.services_puzyr1 {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    width: 200%;
-    opacity: 0.47;
-    z-index: 1;
-}
-
 .services_heading {
     display: flex;
     justify-content: space-between;
@@ -961,27 +1007,28 @@ a:hover {
     z-index: 2;
 }
 
+
 @media (max-width: 1030px) {
     .services_list {
         margin-top: 7.4vh;
     }
 }
 
-.services_list li:nth-child(1) p {
-    width: 16vw;
-}
+/* .services_list li:nth-child(1) p {
+    width: 17vw;
+} */
 
 .services_list li:nth-child(3) p {
-    width: 18vw;
+    width: 19vw;
 }
 
 .services_list li:nth-child(5) p {
-    width: 21vw;
+    width: 22vw;
 }
 
 @media (min-width: 2330px) {
     .services_list li:nth-child(5) p {
-        width: 24vw;
+        width: 25vw;
     }
 }
 
@@ -999,13 +1046,85 @@ a:hover {
     }
 }
 
+.services_list__item {
+    position: relative;
+    margin-top: 0.3%;
+}
+
+
 .price-page .services_list li p {
     width: 100%;
 }
 
-.services_list__item {
-    position: relative;
-    margin-top: 0.3%;
+@media (max-width: 1030px) {
+    .services_list__item_cont_desc .services_list__item_block {
+        width: 100%;
+    }
+}
+
+.cont_services_list__item_cont {
+    width: 50%;
+}
+
+.services_list__item_cont_desc {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    padding-bottom: 5vh;
+    border-bottom: 1px white solid;
+    margin-bottom: 1.1vh;
+}
+
+@media (max-width: 1030px) {
+    .services_list__item_cont_desc {
+        flex-wrap: wrap;
+        padding-bottom: 8vh;
+    }
+}
+
+@media (max-width: 1030px) {
+    .services_list__item_cont_desc p {
+        width: 100%;
+    }
+}
+
+.services_list__item_cont_desc:last-child {
+    border-bottom: none;
+    padding-bottom: 8vh;
+}
+
+@media (max-width: 1030px) {
+    .services_list__item_cont_desc:last-child {
+        padding-bottom: 7vh;
+    }
+}
+
+.price-page .services_list h3 {
+    padding-top: 0.2vh;
+}
+
+
+.services_list__item_block_price {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-weight: 900;
+    padding-top: 0.5vh;
+    font-size: 0.8vw;
+}
+
+@media (max-width: 1030px) {
+    .services_list__item_block_price {
+        font-size: 2.95vw;
+        text-align: left;
+        padding-top: 1.3vh;
+    }
+}
+
+.price-page .services_list__item_block p:nth-child(2) {
+    padding-top: 1.3vh;
+    font-weight: 100;
+    opacity: 0.7;
 }
 
 @media (max-width: 1030px) {
@@ -1025,8 +1144,8 @@ a:hover {
 }
 
 .services_list p {
-    width: 20vw;
-    padding-top: 0.8vh;
+    width: 18vw;
+    padding-top: 0.2vh;
 }
 
 @media (max-width: 1030px) {
@@ -1036,77 +1155,38 @@ a:hover {
     }
 }
 
+.price-page .services_list__item_cont {
+    height: auto;
+}
+
+.price-page .services_list__item_block:nth-last-child(2) p:nth-child(3),
+.price-page .services_list__item_block:nth-last-child(2) p:nth-child(4),
+.price-page .services_list__item_block:nth-last-child(2) p:nth-child(5),
+.price-page .services_list__item_block:nth-last-child(2) p:nth-child(6) {
+    opacity: 0.7;
+    padding-top: 1.3vh;
+
+}
+
+.price-page .services_list__item_cont_desc .services_list__item_block:first-child {
+    width: 42%;
+}
+
+.price-page .services_list__item_cont_desc .services_list__item_block:last-child {
+    width: 58%;
+}
+
+@media (max-width: 1030px) {
+
+    .price-page .services_list__item_cont_desc .services_list__item_block:first-child,
+    .price-page .services_list__item_cont_desc .services_list__item_block:last-child {
+        width: 100%;
+    }
+}
+
+
 .services_list__item_block {
     width: 50%;
-}
-
-@media (max-width: 1030px) {
-    .services_list__item_cont_desc .services_list__item_block{
-        width: 100%;
-    }
-}
-
-.cont_services_list__item_cont {
-    width: 50%;
-}
-
-.services_list__item_cont_desc {
-    display: flex;
-    width: 100%;
-    padding-bottom: 11vh;
-    border-bottom: 1px white solid;
-    margin-bottom: 1.1vh;
-}
-
-@media (max-width: 1030px) {
-    .services_list__item_cont_desc {
-        flex-wrap: wrap;
-        padding-bottom: 8vh;
-    }
-}
-
-@media (max-width: 1030px) {
-    .services_list__item_cont_desc p{
-        width: 100%;
-    }
-}
-
-.services_list__item_cont_desc:last-child {
-    border-bottom: none;
-    padding-bottom: 16vh;
-}
-
-@media (max-width: 1030px) {
-    .services_list__item_cont_desc:last-child{
-        padding-bottom: 7vh;
-    }
-}
-
-.price-page .services_list h3 {
-    padding-top: 0.2vh;
-}
-
-
-.services_list__item_block_price {
-    display: block;
-    width: 100%;
-    text-align: right;
-    font-weight: 900;
-    padding-top: 0.8vh;
-    font-size: 0.96vw;
-}
-
-@media (max-width: 1030px) {
-    .services_list__item_block_price {
-        font-size: 2.95vw;
-        text-align: left;
-        padding-top: 1.3vh;
-    }
-}
-
-.services_list__item_block p:nth-child(2) {
-    padding-top: 1.3vh;
-    opacity: 0.5;
 }
 
 .services_list__item_stripe {
@@ -1117,8 +1197,16 @@ a:hover {
     transition: 1s;
 }
 
+.services_list__item_stripe_price {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 0.2%;
+    background-color: white;
+    transition: 1s;
+}
+
 @media (max-width: 1030px) {
-    .services_list__item_stripe {
+    .services_list__item_stripe .services_list__item_stripe_price {
         margin-bottom: 0.8%;
     }
 }
@@ -1127,57 +1215,62 @@ a:hover {
     width: 100%;
 }
 
+.price-page .services_list__item_stripe {
+    width: 100%;
+    transition: none;
+}
+
+
 .services_list__item_cont {
     display: flex;
-    height: 16vh;
+    min-height: 16vh;
     margin-top: 0.7vh;
+    align-items: flex-start;
 }
 
 @media (max-width: 1030px) {
     .services_list__item_cont {
-        height: 20vh;
+        min-height: 20vh;
+        height: auto;
     }
 }
 
-.price-page .services_list__item_cont {
-    height: auto;
-}
-
 .services_list__item__link {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: end;
-    gap: 0.6vw;
+    gap: 1.3vw;
+    width: 100%;
+    height: 100%;
     position: absolute;
     right: 0;
-    top: 8px;
+    top: 0.38vh;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-.services_list__item:first-child
-.services_list__item__link {
-    top: 16px
+.services_list__item:first-child .services_list__item__link {
+    top: 1vh;
 }
 
 .services_list__item__link .btn {
-    width: 12%;
-    height: 2.2vw;
-    font-size: 0.68vw;
+    width: auto;
+    align-items: baseline;
+    font-size: 0.72vw;
+    border: none;
     letter-spacing: 0;
-    border: 0.1em #474747 solid;
+    padding: 0;
+    opacity: 0.62;
 }
 
 .services_list__item__link .btn:hover {
     border: 0.1em white solid;
     opacity: 1;
+    border: none;
 }
 
 .services_list__item__link:hover {
     opacity: 1;
 }
-
 
 @media (max-width: 1030px) {
     .services_list__item__link {
@@ -1257,7 +1350,8 @@ a:hover {
     opacity: 0.5;
 }
 
-.cases_list__item p span, .cases_list__item img {
+.cases_list__item p span,
+.cases_list__item img {
     pointer-events: all;
 }
 
@@ -1354,7 +1448,7 @@ a:hover {
 }
 
 .cases_list li:nth-child(4) .cases_list__item_block1 p {
-    font-size: 1.6vw;
+    font-size: 1.15vw;
     font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 100%;
@@ -1423,7 +1517,7 @@ a:hover {
 @media (max-width: 1030px) {
     .cases_list-mob {
         display: block;
-        margin-top: 8vh;
+        margin-top: 7vh;
         margin-bottom: 8.2vh;
     }
 }
@@ -1463,7 +1557,7 @@ a:hover {
 }
 
 .cases_list-mob_item h3 {
-    width: 52vw;
+    width: 55vw;
     position: absolute;
     top: 1.9vh;
     left: 4.2vw;
@@ -1499,7 +1593,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     /* overflow: hidden; */
-    margin: 14vh 0 24vh 0;
+    margin: 14vh 0 23vh 0;
     box-sizing: border-box;
 }
 
@@ -1531,6 +1625,10 @@ div.reviews_slider_swiper {
     transition: opacity 5s;
     width: 20vw;
     height: 76vh;
+}
+
+.reviews_slider_slide:hover {
+    cursor: pointer;
 }
 
 .reviews_slider_slide.swiper-slide-active {
@@ -1573,6 +1671,7 @@ div.reviews_slider_swiper {
 @media (max-width: 1030px) {
     .reviews_slider_slide_play {
         width: 17vw;
+        left: 52%;
     }
 }
 
@@ -1613,8 +1712,13 @@ div.reviews_slider_swiper {
 }
 
 .reviews_slider_slide_text h3 {
-    margin-bottom: 1.94vh;
-    margin-left: -0.7px;
+    margin-bottom: 1.4vh;
+}
+
+@media (max-width: 1030px) {
+    .reviews_slider_slide_text h3 {
+        margin-bottom: 0.8vh;
+    }
 }
 
 .reviews_slider_slide_text p {
@@ -1629,7 +1733,7 @@ div.reviews_slider_swiper {
 
 
 .reviews_slider_prev {
-    background-image: url('img/arrow-prev.svg');
+    background-image: url('/img/arrow-prev.svg');
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: left;
@@ -1643,7 +1747,7 @@ div.reviews_slider_swiper {
 @media (max-width: 1030px) {
     .reviews_slider_prev {
         position: relative;
-        background-image: url('img/arrow-prev-mob.svg');
+        background-image: url('/img/arrow-prev-mob.svg');
         background-repeat: no-repeat;
         background-color: transparent;
         background-position: left;
@@ -1655,7 +1759,7 @@ div.reviews_slider_swiper {
 
 
 .reviews_slider_next {
-    background-image: url('img/arrow-next.svg');
+    background-image: url('/img/arrow-next.svg');
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: right;
@@ -1669,7 +1773,7 @@ div.reviews_slider_swiper {
 @media (max-width: 1030px) {
     .reviews_slider_next {
         position: relative;
-        background-image: url('img/arrow-next-mob.svg');
+        background-image: url('/img/arrow-next-mob.svg');
         background-repeat: no-repeat;
         background-color: transparent;
         background-position: right;
@@ -1716,7 +1820,7 @@ div.reviews_slider_swiper {
 }
 
 .contacts :is(.popup_menu__body_links) a {
-    font-size: 5vw;
+    font-size: 4.6vw;
     font-weight: 100;
     padding-top: 0;
 }
@@ -1770,7 +1874,14 @@ div.reviews_slider_swiper {
     padding-bottom: 1vh;
 }
 
-.contacts_bottom_block1 h3 {
+@media (max-width: 1030px) {
+    .contacts_bottom h3 {
+        padding-bottom: 0.6vh;
+    }
+}
+
+.contacts_bottom_block1 h3,
+.contacts_bottom_block2 h3 {
     border-bottom: 1px white solid;
 }
 
@@ -1957,7 +2068,17 @@ div.reviews_slider_swiper {
 }
 
 
+/* 404  */
 
+.error-heading {
+    display: block;
+    text-align: center;
+    margin-top: 26%;
+}
+
+.error-heading p {
+    margin-top: 3%;
+}
 
 
 
